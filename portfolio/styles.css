@@ -169,7 +169,15 @@ body {
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.4;
+    margin-bottom: var(--space-sm);
+}
+
+.mission-subtext {
+    font-family: var(--font-code);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
     margin-bottom: var(--space-lg);
+    letter-spacing: 0.02em;
 }
 
 .directive {
@@ -335,6 +343,51 @@ body {
     color: var(--accent-red);
 }
 
+/* --- PRIOR MISSIONS SECTION --- */
+.missions-list {
+    list-style: none;
+    margin-bottom: var(--space-md);
+}
+
+.missions-list li {
+    padding: var(--space-sm) 0;
+    border-bottom: var(--border-width) var(--border-style) var(--border-primary);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    align-items: baseline;
+}
+
+.missions-list li:last-child {
+    border-bottom: none;
+}
+
+.mission-year {
+    font-family: var(--font-code);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    min-width: 70px;
+}
+
+.mission-org {
+    font-family: var(--font-code);
+    font-weight: 700;
+    color: var(--accent-cyan);
+}
+
+.mission-desc {
+    color: var(--text-secondary);
+    flex: 1;
+}
+
+.cv-note {
+    font-family: var(--font-code);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-align: right;
+    margin-top: var(--space-sm);
+}
+
 /* --- ROADMAP SECTION --- */
 .roadmap-details {
     cursor: pointer;
@@ -406,6 +459,27 @@ body {
     background-color: rgba(0, 255, 136, 0.1);
     padding: 2px 6px;
     margin-left: var(--space-xs);
+}
+
+.phase-detail {
+    display: block;
+    font-family: var(--font-code);
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: var(--space-xs);
+    padding-left: calc(70px + var(--space-sm));
+    line-height: 1.5;
+}
+
+.thesis-note {
+    font-family: var(--font-legal);
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-top: var(--space-lg);
+    padding: var(--space-md);
+    border-top: var(--border-width) var(--border-style) var(--border-primary);
 }
 
 /* --- UPLINK SECTION --- */
