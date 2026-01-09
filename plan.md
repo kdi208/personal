@@ -1,71 +1,87 @@
-I. Design Philosophy: "The Computational Oracle"
-* Aesthetic: CLI / Terminal Brutalism. The site should look like a functional tool, not a marketing brochure. It implies you are "under the hood" of reality.
-* Color Palette: Deep void black background (#000000), Phosphor Green (#39FF14) or Amber (#FFB000) for text. High contrast.
-* Typography: Monospaced fonts (e.g., JetBrains Mono, Fira Code, or IBM Plex Mono).
-* Interaction: Fast, keyboard-navigable, minimal animations (unless they are data visualizations).
+The Design Aesthetic
 
-II. Site Architecture (Single Page Application)
-The site should flow logically from High-Level Vision → Technical Proof → The Architect.
-1. The Hero Section: The "Terminal" 
+Vibe: "The Architect." Think Notion meets The Matrix (but subtle).
 
+Typography: Monospace for headers (e.g., Courier New or JetBrains Mono) to signal "Code/Logic," paired with a clean Sans-Serif (e.g., Inter or Helvetica) for body text to signal "clarity/law."
 
-* Visual: A blinking cursor. Text types out automatically upon load.
-* Headline: > INITIALIZING COMPUTATIONAL GOVERNANCE...
-* Sub-Headline: > ARCHITECTING THE CIVILIZATIONAL KERNEL.
-* Status Bar:
-    * LOCATION: SAN FRANCISCO
-    * STATUS: BUILDING PHASE I (OUROBOROS)
-    * HORIZON: 50 YEARS
-* Interactive Element: A background animation of a Voronoi diagram or cellular automata (Game of Life) that reacts to the mouse, symbolizing "simulation as a search algorithm".
-2. The Manifesto: "The 50-Year Plan"
-* Concept: This acts as the filter. If they read this and think you are crazy, good. If they get it, they are your target.
-* Format: A collapsible timeline (JSON tree structure style).
-* Content:
-    * [YEARS 1-7] PHASE I: OUROBOROS – Agentic Modeling for Macro-Strategy.
-    * [YEARS 8-15] PHASE II: NEXUS – The Corporate Digital Twin.
-    * [YEARS 16-30] PHASE III: INFRASTRUCTURE – Vertical Integration / "The Mirror".
-    * [YEARS 31-45] PHASE IV: THE KERNEL – Global Clearinghouse for Intent.
-    * [YEARS 46-50] PHASE V: STEWARDSHIP – Constitutional AI Governance.
-* CTA: A download button for the "Civilizational Kernel Manifesto" PDF.
-3. The Lab: "Proof of Competence"
-This is the most critical section to prove you are an engineer, not just a "Suit".
+Palette: Dark Mode by default. Black background (#000000), Off-white text (#F0F0F0), and a single accent color for "Signal" (e.g., Electric Blue or Terminal Green).
 
+Layout: Single-page scroll. High density of ideas, low density of fluff.
 
-* Project A: The Dopamine Agent (Live Sandbox)
-    * Description: "Reinforcement Learning agent with biological reward prediction error parameters."
-    * Visual: Embed your Streamlit or React app directly here.
-    * Features: Show the "Neuro-State Dashboard" and the "Wirehead Mode" button clearly.
-    * Caption: "Modeling probabilistic human behaviors within a deterministic rules engine".
-* Project B: Sigil AI / Micro-Kernel
-    * Description: "Multi-agent simulation where autonomous 'Patient' and 'Clinician' agents stress-test clinical workflows".
-    * Link: Link to the GitHub Repo.
-4. The Architect: "The Source Code"
-This replaces the standard "About Me." It reframes your legal background as "Systems Engineering."
-* Headline: > DECOMPILING THE RULES ENGINE
-* Copy:"I spent a decade auditing the source code of civilization (Law & Economics). I modeled risk for $18B in M&A deals and drafted algorithmic policy for the U.S. Congress. Now, I translate those legal constraints into agentic logic.".
-* Key Skills (displayed as a code block):JSON{
-*   "domain": ["Corporate Law", "Macro-Economics", "Mechanism Design"],
-*   "stack": ["Python", "LangChain", "RAG Pipelines", "React"],
-*   "current_focus": "Multi-Agent Orchestration"
-* }
-* 
-5. Footer: The Signal Check
-* Text: > EVERYTHING IS COMPUTABLE. JOIN THE SEARCH..
-* Links: GitHub | LinkedIn | Email (dino.ilievski@gmail.com).
+Website Copy & Structure
 
-III. Copywriting Strategy (The "Hook" Scripts)
-Use the "Pitch Scripts" from your strategy document as the headers for your blog/research posts to capture the specific audience types.
+1. Hero Section
 
+(Center aligned. Stark. No images, just text.)
 
-* Blog Post 1: "Why the World Doesn't Need Another Metaverse: It Needs a Prediction Engine."
-* Blog Post 2: "Reframed: Deconstructing the 'Rules Engine' of the Economy."
-* Blog Post 3: "The Dopamine Agent: Coding Addiction into AI."
+DINO ILIEVSKI [Architect of Reality]
 
-IV. Recommended Tech Stack
-To maintain the "Engineer" signal:
+"The world doesn't need another Metaverse. It needs a Prediction Engine."
 
+I am building the Civilizational Kernel: A multi-agent simulation that mirrors reality to generate the future.
 
-* Framework: Next.js (React) – Shows you can build modern web apps.
-* Styling: Tailwind CSS – For rapid, clean UI development.
-* Animation: Framer Motion (for smooth UI transitions) or Three.js (if you want a 3D visualization of the agent network).
-* Hosting: Vercel (Standard for Next.js) or GitHub Pages (Shows you live in the repo).
+2. The Pivot (The "Why")
+
+(Left aligned. This frames your unique "Lawyer -> Coder" advantage.)
+
+II. FROM OBSERVER TO ARCHITECT
+I spent a decade deconstructing the "source code" of society:
+
+U.S. Congress: Drafted tax legislation and algorithmic policy.
+
+Big Law (Paul Hastings/McDermott): Audited the logic layers of billion-dollar M&A deals.
+
+The Realization: Legal contracts fail because they are static. I am transitioning from observing the law to simulating it. I bridge the gap between rigorous legal frameworks and agentic orchestration. I don't write contracts anymore; I write the constraints that agents live by.
+
+3. The Current Build (Phase I)
+
+(Bento Grid style layout: distinct blocks of information.)
+
+III. OPERATION OUROBOROS
+[Status: Active] [Capital: Self-Funded]
+
+The Thesis: "The Simulation is the Oracle." We are building a logic-based simulation engine for hedge funds and nation-states to pre-run regulatory scenarios. Think of it as a wind tunnel for corporate governance.
+
+The Stack:
+
+Core: Multi-Agent Orchestration (LangChain, Custom RAG).
+
+Logic: Computational Governance & Mechanism Design.
+
+Goal: Stress-test the "Ouroboros" thesis against reality.
+
+4. The Master Plan (The 50-Year Vision)
+
+(Timeline style. Show the scale of your ambition.)
+
+IV. THE ROADMAP
+Phase I (Now): The Agentic Sandbox. Build the "Roadster"—a proprietary modeling engine for elite decision-makers (Hedge Funds/Reinsurance).
+
+Phase II: The Corporate Digital Twin. Scale to "Nexus"—the enterprise coordination plane where companies pre-negotiate contracts in simulation.
+
+Phase III: The Infrastructure Layer. Vertical integration of specialized hardware for agentic logic.
+
+Phase IV: The Merger. The Civilizational Kernel acts as the global clearinghouse for intent. 40% of the global economy is "pre-cleared" in sim.
+
+5. The Request (Recruiting)
+
+(The most important section. High contrast background.)
+
+V. SIGNAL STRENGTH
+I am not here to collect business cards. I am looking for 2-3 High-Agency Engineers who understand the 50-year vision and have the skills to build the Phase I engine.
+
+The Filter:
+
+Do you understand Agentic Logic?
+
+Are you tired of building "features" instead of "worlds"?
+
+Can you optimize Ops/Strategy with the same rigor used for the U.S. Congress?
+
+If this is you: [ d.ilievski@gmail.com ] — Subject: "Architect"
+
+6. Footer
+
+[GitHub] • [LinkedIn] • [Read the Manifesto]
+
+"Success is defined by Signal Strength."
