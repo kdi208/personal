@@ -380,13 +380,6 @@ body {
     flex: 1;
 }
 
-.cv-note {
-    font-family: var(--font-code);
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    text-align: right;
-    margin-top: var(--space-sm);
-}
 
 /* --- ROADMAP SECTION --- */
 .roadmap-details {
