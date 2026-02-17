@@ -10,22 +10,19 @@
     
     <style>
         :root {
-            --bg-paper: #f0f0f0;
+            --bg-paper: #f4f4f4;
             --bg-card: #ffffff;
-            --ink-black: #050505;
+            --ink-black: #111111;
             --ink-dim: #666666;
-            --grid-line: #d0d0d0;
+            --grid-line: #cccccc;
             
-            /* The "Diff" Colors */
-            --diff-red-bg: #ffebe9;
-            --diff-red-text: #cf222e;
-            --diff-red-border: #ffc1c0;
-            
-            --diff-green-bg: #dafbe1;
-            --diff-green-text: #1a7f37;
-            --diff-green-border: #9be9a8;
+            /* The "Diff" Colors - Muted/Professional */
+            --diff-red-bg: #fff1f0;
+            --diff-red-text: #d32f2f;
+            --diff-green-bg: #f6ffed;
+            --diff-green-text: #388e3c;
 
-            --accent-blue: #0969da;
+            --accent-blue: #0044cc;
             
             --font-serif: 'Courier Prime', monospace; /* The Law */
             --font-mono: 'JetBrains Mono', monospace; /* The Code */
@@ -33,18 +30,16 @@
 
         /* Dark Mode / Terminal Mode Support */
         [data-theme="terminal"] {
-            --bg-paper: #0d1117;
-            --bg-card: #161b22;
-            --ink-black: #c9d1d9;
-            --ink-dim: #8b949e;
-            --grid-line: #30363d;
-            --diff-red-bg: #3c1618;
-            --diff-red-text: #ff7b72;
-            --diff-red-border: #6e272b;
-            --diff-green-bg: #123123;
-            --diff-green-text: #3fb950;
-            --diff-green-border: #245834;
-            --accent-blue: #58a6ff;
+            --bg-paper: #0a0a0a;
+            --bg-card: #111111;
+            --ink-black: #e0e0e0;
+            --ink-dim: #888888;
+            --grid-line: #333333;
+            --diff-red-bg: #2a1215;
+            --diff-red-text: #ff7875;
+            --diff-green-bg: #162312;
+            --diff-green-text: #49aa19;
+            --accent-blue: #40a9ff;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -59,37 +54,11 @@
             transition: background 0.3s ease, color 0.3s ease;
         }
 
-        /* --- THE SIDEBAR (The "System Status") --- */
-        .sidebar {
-            position: fixed;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 40px;
-            border-right: 1px solid var(--grid-line);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 0;
-            font-family: var(--font-mono);
-            font-size: 10px;
-            color: var(--ink-dim);
-            z-index: 100;
-            background: var(--bg-paper);
-        }
-        
-        .sidebar-text {
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
         /* --- LAYOUT --- */
-        .main-content {
-            margin-left: 40px; /* Sidebar offset */
-            max-width: 1000px;
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            border-left: 1px solid var(--grid-line);
             border-right: 1px solid var(--grid-line);
             background: var(--bg-paper);
             min-height: 100vh;
@@ -97,25 +66,24 @@
 
         .section {
             border-bottom: 1px solid var(--grid-line);
-            padding: 3rem;
-            position: relative;
+            padding: 4rem 3rem;
         }
 
         /* --- TYPOGRAPHY --- */
         h1 {
             font-family: var(--font-mono);
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             line-height: 1;
             text-transform: uppercase;
-            letter-spacing: -0.05em;
+            letter-spacing: -0.03em;
             margin-bottom: 0.5rem;
         }
 
         h2 {
             font-family: var(--font-mono);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.05em;
             color: var(--ink-dim);
             margin-bottom: 2rem;
             display: flex;
@@ -123,366 +91,231 @@
         }
 
         h2::before {
-            content: "## ";
+            content: ">>";
             color: var(--accent-blue);
             margin-right: 10px;
-        }
-
-        h3 {
-            font-family: var(--font-mono);
-            font-size: 1.2rem;
             font-weight: 700;
-            margin-bottom: 1rem;
         }
 
         p {
-            max-width: 65ch;
+            max-width: 60ch;
             margin-bottom: 1.5rem;
-        }
-
-        /* --- THE REDACTED EFFECT (Hover to Reveal) --- */
-        .redacted {
-            background: var(--ink-black);
-            color: var(--ink-black);
-            padding: 0 4px;
-            cursor: help;
-            transition: all 0.2s ease;
-        }
-        
-        .redacted:hover {
-            background: var(--accent-blue);
-            color: white;
         }
 
         /* --- COMPONENTS --- */
 
-        /* 1. Header Metadata */
-        .meta-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
+        /* 1. Header */
+        .header-meta {
+            display: flex;
+            justify-content: space-between;
             font-family: var(--font-mono);
             font-size: 0.75rem;
             color: var(--ink-dim);
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 1px dashed var(--grid-line);
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--grid-line);
         }
-        
-        .meta-item strong { display: block; color: var(--ink-black); }
 
-        /* 2. The Thesis (Hero) */
+        /* 2. The Thesis */
         .thesis-text {
-            font-size: 1.4rem;
-            line-height: 1.4;
+            font-size: 1.25rem;
             font-weight: 400;
         }
 
-        /* 3. The "Diff" View (Bug Report) */
+        /* 3. The Diff (Bug Report) */
         .diff-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             border: 1px solid var(--grid-line);
             font-family: var(--font-mono);
-            font-size: 0.85rem;
-        }
-
-        .diff-pane {
-            padding: 2rem;
-        }
-
-        .diff-header {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
-            opacity: 0.7;
-            border-bottom: 1px solid rgba(0,0,0,0.1);
-            padding-bottom: 0.5rem;
-        }
-
-        .diff-old {
-            background: var(--diff-red-bg);
-            border-right: 1px solid var(--diff-red-border);
-            color: var(--diff-red-text);
-        }
-
-        .diff-new {
-            background: var(--diff-green-bg);
-            color: var(--diff-green-text);
-        }
-
-        .code-line {
-            display: block;
-            margin-bottom: 0.5rem;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-
-        .code-line::before {
-            position: absolute;
-            left: 0;
-            font-weight: bold;
-        }
-
-        .diff-old .code-line::before { content: "-"; }
-        .diff-new .code-line::before { content: "+"; }
-
-        /* 4. The Stack (Architecture) */
-        .stack-item {
-            border: 1px solid var(--grid-line);
+            font-size: 0.8rem;
             background: var(--bg-card);
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: transform 0.2s ease;
-        }
-        
-        .stack-item:hover {
-            transform: translateX(10px);
-            border-color: var(--accent-blue);
         }
 
-        .stack-label {
+        .diff-pane { padding: 1.5rem; }
+        .diff-old { background: var(--diff-red-bg); color: var(--diff-red-text); border-right: 1px solid var(--grid-line); }
+        .diff-new { background: var(--diff-green-bg); color: var(--diff-green-text); }
+        
+        .code-line { display: block; margin-bottom: 0.25rem; }
+        .code-line::before { content: "- "; opacity: 0.5; }
+        .diff-new .code-line::before { content: "+ "; }
+
+        /* 4. Telemetry (The "Live" Element) */
+        .telemetry-box {
+            background: #000;
+            color: #00ff00;
             font-family: var(--font-mono);
-            font-weight: 700;
-            font-size: 0.9rem;
+            font-size: 0.75rem;
+            padding: 1.5rem;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid var(--ink-black);
         }
         
-        .stack-desc {
-            font-size: 0.9rem;
-            color: var(--ink-dim);
-            text-align: right;
+        .telemetry-box::before {
+            content: "LIVE_SIMULATION_FEED // NODE: SF_01";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #1a1a1a;
+            color: #888;
+            padding: 4px 10px;
+            font-size: 10px;
+            border-bottom: 1px solid #333;
         }
 
-        /* 5. The Ask (Requisition) */
+        .log-content { margin-top: 20px; }
+        .log-line { margin-bottom: 4px; opacity: 0.9; }
+        .log-error { color: #ff3333; }
+        .log-sys { color: #ffff33; }
+
+        /* 5. The Requisition */
         .req-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
         }
         
-        .req-col {
-            border-top: 2px solid var(--ink-black);
-            padding-top: 1rem;
-        }
-
-        .req-list li {
-            list-style: none;
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-        
-        .req-list li::before {
-            content: ">>";
-            position: absolute;
-            left: 0;
-            color: var(--accent-blue);
+        .req-col h3 {
             font-family: var(--font-mono);
-            font-size: 0.8rem;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--ink-black);
+            padding-bottom: 0.5rem;
+            display: inline-block;
         }
 
         /* Footer */
         .footer-cta {
             text-align: center;
-            padding: 4rem 2rem;
+            padding: 5rem 2rem;
         }
         
         .huge-email {
             font-family: var(--font-mono);
-            font-size: 2.5rem; /* Massive visual anchor */
+            font-size: 2rem;
             font-weight: 700;
             color: var(--accent-blue);
             text-decoration: none;
-            display: block;
-            margin: 2rem 0;
-            word-break: break-all;
         }
+        .huge-email:hover { text-decoration: underline; }
 
-        .huge-email:hover {
-            text-decoration: underline;
-            text-decoration-thickness: 4px;
-        }
-
-        /* Utility */
-        .btn-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            font-family: var(--font-mono);
-            font-size: 10px;
-            background: var(--bg-card);
-            border: 1px solid var(--grid-line);
-            padding: 5px 10px;
+        /* Theme Toggle */
+        .theme-btn {
+            float: right;
             cursor: pointer;
-            z-index: 200;
-            text-transform: uppercase;
+            text-decoration: underline;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
         }
 
         /* Mobile */
         @media (max-width: 768px) {
-            .main-content { margin-left: 0; border-right: none; }
-            .sidebar { display: none; }
-            .section { padding: 2rem 1.5rem; }
-            h1 { font-size: 2.5rem; }
-            .diff-container, .req-grid, .meta-grid { grid-template-columns: 1fr; }
-            .diff-old { border-right: none; border-bottom: 1px solid var(--diff-red-border); }
-            .huge-email { font-size: 1.5rem; }
+            .diff-container, .req-grid { grid-template-columns: 1fr; }
+            .diff-old { border-right: none; border-bottom: 1px solid var(--grid-line); }
+            h1 { font-size: 2rem; }
         }
-
     </style>
 </head>
 <body>
 
-<!-- Theme Toggle -->
-<button class="btn-toggle" id="theme-btn">Invert Display</button>
+<div class="container">
 
-<!-- Fixed Technical Sidebar -->
-<aside class="sidebar">
-    <div class="sidebar-text">SYS_STATUS: ONLINE</div>
-    <div class="sidebar-text">SEC_CLEARANCE: PUBLIC</div>
-    <div class="sidebar-text">VER: 2.4.0</div>
-</aside>
-
-<main class="main-content">
-
-    <!-- HERO SECTION -->
-    <section class="section" style="padding-top: 5rem;">
-        <div style="margin-bottom: 1rem; font-family: var(--font-mono); color: var(--accent-blue);">[CLASSIFIED: ARCHITECT EYES ONLY]</div>
+    <!-- HEADER -->
+    <section class="section">
+        <span class="theme-btn" id="theme-btn">[INVERT_DISPLAY]</span>
         <h1>Dino Ilievski</h1>
-        <p style="font-family: var(--font-mono); color: var(--ink-dim); margin-top: -10px;">ARCHITECT // OPERATOR // FOUNDER</p>
+        <p style="font-family: var(--font-mono); margin-top: -0.5rem; color: var(--ink-dim);">
+            ARCHITECT // SIGIL AI
+        </p>
         
-        <div class="meta-grid">
-            <div class="meta-item">
-                <strong>PROJECT</strong>
-                Civilizational Kernel
-            </div>
-            <div class="meta-item">
-                <strong>STATUS</strong>
-                Funded [Runway: 24mo]
-            </div>
-            <div class="meta-item">
-                <strong>DEPLOYMENT</strong>
-                San Francisco, CA
-            </div>
+        <div class="header-meta">
+            <div>PROJECT: CIVILIZATIONAL KERNEL</div>
+            <div>STATUS: FUNDED [24mo]</div>
+            <div>LOC: SAN FRANCISCO</div>
         </div>
     </section>
 
-    <!-- THESIS (The Hook) -->
+    <!-- THESIS -->
     <section class="section">
         <h2>01_Thesis</h2>
         <p class="thesis-text">
             <strong>Reality is computable.</strong><br><br>
             The US Code is a non-deterministic algorithm running on wetware. It is buggy, slow, and expensive. 
-            As we transition to an agentic economy, we cannot rely on "RLHF" (manners) to govern billion-dollar transactions. We need <span class="redacted">Physics</span>.
             <br><br>
             I am not building a chatbot. I am refactoring the Operating System of Society into a deterministic logic layer for Autonomous Agents.
         </p>
     </section>
 
-    <!-- THE DIAGNOSTIC (The Diff) -->
+    <!-- TELEMETRY (THE PROOF) -->
     <section class="section">
-        <h2>02_System_Diagnostic</h2>
-        <p><strong>BUG REPORT #351:</strong> Capital Transfer Ambiguity</p>
-        
-        <div class="diff-container">
-            <!-- Left: The Problem -->
-            <div class="diff-pane diff-old">
-                <div class="diff-header">Current State (Legacy Law)</div>
-                <span class="code-line">INPUT: Founder transfers IP for Stock</span>
-                <span class="code-line">PROCESS: LLM interprets intent via text</span>
-                <span class="code-line">CHECK: "Did I control 80%?" -> Hallucinated</span>
-                <br>
-                <span class="code-line" style="font-weight: 700;">OUTPUT: TAX PENALTY (30%)</span>
-                <span class="code-line" style="font-weight: 700;">RESULT: LIQUIDATION</span>
-            </div>
-            
-            <!-- Right: The Solution -->
-            <div class="diff-pane diff-new">
-                <div class="diff-header">Target State (Sigil Kernel)</div>
-                <span class="code-line">INPUT: Founder transfers IP for Stock</span>
-                <span class="code-line">PROCESS: Python Logic Gate (Section 351)</span>
-                <span class="code-line">CHECK: `if control < 0.8: return False`</span>
-                <br>
-                <span class="code-line" style="font-weight: 700;">OUTPUT: TRANSACTION BLOCKED</span>
-                <span class="code-line" style="font-weight: 700;">RESULT: FORCED COMPLIANCE</span>
-            </div>
-        </div>
-        <p style="margin-top: 1.5rem; font-size: 0.9rem; font-family: var(--font-mono); color: var(--ink-dim);">
-            // NOTE: You cannot prompt-engineer the law. You must hard-code the constraints.
+        <h2>02_Simulation_Telemetry</h2>
+        <p style="font-size: 0.85rem; margin-bottom: 1rem;">
+            Real-time output from the Sigil v0.1 Kernel. Agents attempting tax avoidance strategies are checked against rigid pythonic logic gates.
         </p>
+        
+        <div class="telemetry-box">
+            <div class="log-content" id="log-feed">
+                <!-- JS Populated -->
+            </div>
+        </div>
     </section>
 
-    <!-- THE ARCHITECTURE -->
+    <!-- THE DIAGNOSTIC -->
     <section class="section">
-        <h2>03_Architecture</h2>
-        <p>I am building a neuro-symbolic "Regulatory Sandbox."</p>
-        
-        <div class="stack-item">
-            <div class="stack-label">LAYER 1: THE BRAIN</div>
-            <div class="stack-desc">LLM (Probabilistic Reasoning / Intent)</div>
-        </div>
-        
-        <div style="text-align: center; color: var(--grid-line); font-size: 0.8rem; margin: 0.5rem;">↓ REWARD SIGNAL ↓</div>
-        
-        <div class="stack-item" style="border-left: 4px solid var(--accent-blue);">
-            <div class="stack-label">LAYER 2: THE PHYSICS (MY IP)</div>
-            <div class="stack-desc">Python Logic Gates (Deterministic Law)</div>
+        <h2>03_The_Problem</h2>
+        <div class="diff-container">
+            <div class="diff-pane diff-old">
+                <strong style="display:block; margin-bottom:1rem;">LEGACY (LLM ONLY)</strong>
+                <span class="code-line">INPUT: "Transfer IP to HoldCo"</span>
+                <span class="code-line">PROCESS: Probabilistic Token Prediction</span>
+                <span class="code-line">ERROR: Ignores 80% Control Rule</span>
+                <span class="code-line" style="font-weight:700;">RESULT: 30% TAX PENALTY</span>
+            </div>
+            <div class="diff-pane diff-new">
+                <strong style="display:block; margin-bottom:1rem;">SIGIL KERNEL</strong>
+                <span class="code-line">INPUT: "Transfer IP to HoldCo"</span>
+                <span class="code-line">PROCESS: `def section_351(control):`</span>
+                <span class="code-line">LOGIC: `if control < 0.8: raise Error`</span>
+                <span class="code-line" style="font-weight:700;">RESULT: COMPLIANCE ENFORCED</span>
+            </div>
         </div>
     </section>
 
-    <!-- THE DEAL (Requisition) -->
+    <!-- THE DEAL -->
     <section class="section">
         <h2>04_Requisition</h2>
-        
         <div class="req-grid">
             <div class="req-col">
-                <h3>WHAT I BRING</h3>
-                <ul class="req-list">
-                    <li><strong>Domain Authority:</strong> 10 years executing the "Source Code" of the US Economy (M&A, Tax Policy, JCT Congress).</li>
-                    <li><strong>Capital:</strong> $2M Self-Funded Runway. (No VC pitch required).</li>
-                    <li><strong>Vision:</strong> A 50-year roadmap to the Civilizational Kernel.</li>
-                </ul>
+                <h3>WHAT I BRING (PHYSICS)</h3>
+                <p>10 years executing the "Source Code" of the US Economy (M&A, Tax Policy). $2M self-funded runway. Deep domain architecture.</p>
             </div>
-            
             <div class="req-col">
-                <h3>WHAT I NEED</h3>
-                <ul class="req-list">
-                    <li><strong>Profile:</strong> Systems Engineer / Rust / WASM.</li>
-                    <li><strong>Task:</strong> You aren't building SaaS. You are building a Universe.</li>
-                    <li><strong>Philosophy:</strong> You believe code is the highest form of law.</li>
-                </ul>
+                <h3>WHAT I NEED (ENGINE)</h3>
+                <p>Systems Engineer (Rust/WASM). You understand that we aren't building SaaS; we are building a Universe.</p>
             </div>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer-cta section" style="border-bottom: none;">
-        <p style="font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 2px;">Initiate Handshake</p>
+        <p style="font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase;">Direct Uplink</p>
         <a href="mailto:dino@sigil.ai" class="huge-email">dino@sigil.ai</a>
         
-        <div style="margin-top: 3rem; font-family: var(--font-mono); font-size: 0.8rem;">
-            <a href="#">[GITHUB]</a> &nbsp;/&nbsp; 
-            <a href="#">[LINKEDIN]</a> &nbsp;/&nbsp; 
-            <a href="#">[READ_THE_PLAN]</a>
-        </div>
-        
-        <div style="margin-top: 4rem; opacity: 0.3; font-size: 0.7rem; font-family: var(--font-mono);">
-            SECURE TRANSMISSION ENDS<br>
-            HASH: 0x93A2...F1
+        <div style="margin-top: 3rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--ink-dim);">
+            [GITHUB] &nbsp; [LINKEDIN] &nbsp; [READ_THE_PLAN]
         </div>
     </footer>
 
-</main>
+</div>
 
 <script>
+    // 1. Theme Toggle
     const btn = document.getElementById('theme-btn');
     const body = document.body;
     
-    // Check for saved preference
     if(localStorage.getItem('theme') === 'terminal') {
         body.setAttribute('data-theme', 'terminal');
     }
@@ -496,6 +329,34 @@
             localStorage.setItem('theme', 'terminal');
         }
     });
+
+    // 2. Live Log Logic
+    const logFeed = document.getElementById('log-feed');
+    const lines = [
+        { text: "Initializing Agent_Cluster_Alpha...", type: "log-sys" },
+        { text: "Loading Statutory_Library: [IRC_SEC_351, DEL_CORP_LAW]", type: "normal" },
+        { text: "Agent_04 attempted asset transfer. Checking control...", type: "normal" },
+        { text: "VIOLATION: Control < 80%. Transaction Rejected.", type: "log-error" },
+        { text: "Agent_04 modifying structure: issuing voting stock...", type: "normal" },
+        { text: "Re-evaluating Section 351 compliance...", type: "log-sys" },
+        { text: "COMPLIANCE VERIFIED. Entity Formed.", type: "normal" },
+        { text: "Ledger Updated. Block Height: 10423", type: "log-sys" }
+    ];
+
+    let i = 0;
+    function typeLog() {
+        const div = document.createElement('div');
+        div.className = `log-line ${lines[i].type || ''}`;
+        div.innerText = `> ${lines[i].text}`;
+        logFeed.appendChild(div);
+        
+        if (logFeed.children.length > 7) logFeed.removeChild(logFeed.firstChild);
+        
+        i = (i + 1) % lines.length;
+        setTimeout(typeLog, Math.random() * 800 + 400); // Random "processing" speed
+    }
+    typeLog();
+
 </script>
 
 </body>
