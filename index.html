@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charismatic Authority</title>
+    <meta name="description" content="As we approach the singularity, only five things are worth working on. If you are building one of them, I want to meet you.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ─── Reset ─────────────────────────────── */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* ─── Root ──────────────────────────────── */
+        :root {
+            --white: #ffffff;
+            --black: #0a0a0a;
+            --ink:   #1a1a1a;
+            --dim:   #666666;
+            --rule:  #d8d8d8;
+            --serif: 'EB Garamond', Georgia, serif;
+            --sans:  'Inter', system-ui, sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--white);
+            color: var(--ink);
+            font-family: var(--serif);
+            font-size: 19px;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ─── Layout ────────────────────────────── */
+        .page {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 0 2.5rem;
+        }
+
+        /* ─── Rule lines ────────────────────────── */
+        .rule {
+            border: none;
+            border-top: 1px solid var(--rule);
+            margin: 0;
+        }
+
+        /* ─── HEADER ────────────────────────────── */
+        header {
+            padding: 5rem 0 4rem;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .kicker {
+            font-family: var(--sans);
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--dim);
+            margin-bottom: 2.2rem;
+        }
+
+        h1 {
+            font-family: var(--serif);
+            font-size: clamp(3.2rem, 7vw, 5.5rem);
+            font-weight: 500;
+            line-height: 1.0;
+            letter-spacing: -0.02em;
+            color: var(--black);
+            margin-bottom: 1.8rem;
+        }
+
+        .definition {
+            font-family: var(--sans);
+            font-size: 0.82rem;
+            color: var(--dim);
+            line-height: 1.6;
+            max-width: 52ch;
+            padding-top: 1.4rem;
+            border-top: 1px solid var(--rule);
+        }
+
+        .definition strong {
+            font-weight: 600;
+            color: var(--ink);
+            font-style: normal;
+        }
+
+        /* ─── SECTIONS ──────────────────────────── */
+        section {
+            padding: 4.5rem 0;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        section:last-of-type { border-bottom: none; }
+
+        .section-label {
+            font-family: var(--sans);
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--dim);
+            margin-bottom: 2.4rem;
+        }
+
+        /* ─── INTRO BODY COPY ───────────────────── */
+        .intro p {
+            font-size: 1.22rem;
+            line-height: 1.72;
+            max-width: 58ch;
+            margin-bottom: 1.4rem;
+            color: var(--ink);
+        }
+
+        .intro p:last-child { margin-bottom: 0; }
+
+        .five-things {
+            list-style: none;
+            margin: 2rem 0;
+            padding: 0;
+        }
+
+        .five-things li {
+            font-family: var(--sans);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            padding: 0.8rem 0;
+            border-top: 1px solid var(--rule);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .five-things li:last-child { border-bottom: 1px solid var(--rule); }
+
+        .thing-num {
+            font-family: var(--serif);
+            font-style: italic;
+            color: var(--dim);
+            font-size: 1rem;
+            min-width: 1.4rem;
+        }
+
+        /* ─── SHACKLETON AD ─────────────────────── */
+        .shackleton {
+            padding: 4.5rem 0;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .ad-frame {
+            border: 1px solid var(--black);
+            padding: 3rem 2.8rem 2.5rem;
+            position: relative;
+            max-width: 560px;
+        }
+
+        .ad-stamp {
+            position: absolute;
+            top: -0.75rem;
+            left: 2rem;
+            background: var(--white);
+            padding: 0 0.8rem;
+            font-family: var(--sans);
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--dim);
+        }
+
+        .ad-headline {
+            font-family: var(--serif);
+            font-size: 1.65rem;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 1.6rem;
+            color: var(--black);
+        }
+
+        .ad-body {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--ink);
+        }
+
+        .ad-attribution {
+            margin-top: 1.4rem;
+            font-family: var(--sans);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--dim);
+        }
+
+        /* ─── CTA ───────────────────────────────── */
+        .cta-section {
+            padding: 5rem 0;
+            border-bottom: none;
+        }
+
+        .cta-body {
+            font-size: 1.22rem;
+            max-width: 54ch;
+            line-height: 1.72;
+            margin-bottom: 0;
+        }
+
+        .cta-body em {
+            font-style: italic;
+        }
+
+        /* ─── FOOTER ────────────────────────────── */
+        footer {
+            padding: 2.5rem 0 4rem;
+            border-top: 1px solid var(--rule);
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: var(--sans);
+            font-size: 0.72rem;
+            color: var(--dim);
+        }
+
+        /* ─── CURSOR BLINK ──────────────────────── */
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50%       { opacity: 0; }
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 0.55em;
+            height: 1.1em;
+            background: var(--black);
+            vertical-align: text-bottom;
+            margin-left: 0.1em;
+            animation: blink 1.1s step-end infinite;
+        }
+
+        /* ─── FADE IN ───────────────────────────── */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(18px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade { opacity: 0; animation: fadeUp 0.7s ease forwards; }
+        .fade-1 { animation-delay: 0.05s; }
+        .fade-2 { animation-delay: 0.18s; }
+        .fade-3 { animation-delay: 0.32s; }
+        .fade-4 { animation-delay: 0.48s; }
+
+        /* ─── RESPONSIVE ────────────────────────── */
+        @media (max-width: 600px) {
+            .page { padding: 0 1.4rem; }
+            h1 { font-size: 2.8rem; }
+            .ad-frame { padding: 2.4rem 1.6rem 2rem; }
+            .footer-inner { flex-direction: column; gap: 0.8rem; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+
+    <!-- ── HEADER ──────────────────────────── -->
+    <header>
+        <p class="kicker fade fade-1">Essay — 2026</p>
+        <h1 class="fade fade-2">Charismatic<br>Authority<span class="cursor"></span></h1>
+        <div class="definition fade fade-3">
+            <strong>Definition:</strong> A form of authority in which the legitimacy of a leader derives not from position or tradition, but from the personal charisma — the perceived extraordinary qualities — of the leader themselves.
+        </div>
+    </header>
+
+    <!-- ── INTRODUCTION ────────────────────── -->
+    <section class="intro fade fade-4">
+        <p class="section-label">Introduction</p>
+
+        <p>
+            As we approach the singularity — arriving, by most serious estimates, around 2045 — the number of things worth working on has collapsed to roughly five.
+        </p>
+
+        <ul class="five-things" id="five-things">
+            <li><span class="thing-num">i.</span> Artificial Intelligence</li>
+            <li><span class="thing-num">ii.</span> Compute</li>
+            <li><span class="thing-num">iii.</span> Brain-Computer Interface</li>
+            <li><span class="thing-num">iv.</span> Longevity</li>
+            <li><span class="thing-num">v.</span> Simulation</li>
+        </ul>
+
+        <p>
+            Everything else is maintenance. Important maintenance, perhaps — but maintenance nonetheless.
+        </p>
+    </section>
+
+    <!-- ── SHACKLETON AD ───────────────────── -->
+    <section class="shackleton">
+        <p class="section-label">The Standard</p>
+
+        <div class="ad-frame" id="shackleton-ad">
+            <span class="ad-stamp">The London Times, 1914</span>
+            <p class="ad-headline">Men Wanted for Hazardous Journey</p>
+            <p class="ad-body">
+                Low wages, bitter cold, long hours of complete darkness.<br>
+                Safe return doubtful.<br><br>
+                Honour and recognition in the event of success.
+            </p>
+            <p class="ad-attribution">— Ernest Shackleton</p>
+        </div>
+    </section>
+
+    <!-- ── CTA ─────────────────────────────── -->
+    <section class="cta-section">
+        <p class="section-label">The Offer</p>
+
+        <p class="cta-body">
+            If you are working on one of these five things and need human or financial capital, I will meet with you.
+            <br><br>
+            If I think you are a future Napoleon — a person whose force of will is so singular that history bends around them — <em>I will fund you.</em>
+        </p>
+    </section>
+
+</div><!-- /page -->
+
+<!-- ── FOOTER ──────────────────────────────── -->
+<footer>
+    <div class="page">
+        <div class="footer-inner">
+            <span>Charismatic Authority &copy; 2026</span>
+            <span>An essay on what matters now.</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Intersection Observer for list items — stagger animate on scroll
+    const items = document.querySelectorAll('.five-things li');
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateX(0)';
+                }, i * 80);
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    items.forEach(item => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateX(-12px)';
+        item.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+        obs.observe(item);
+    });
+</script>
+
+</body>
+</html>
