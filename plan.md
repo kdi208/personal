@@ -11,6 +11,8 @@ introduction:
 
 As we approach the singularity (2045), Only five things worth working on now: AI, compute, BCI, longevity and simulation. 
 
+But i'm only concerned with two things: creating a BCI to replace drugs, and solving social simulations. 
+
 Insert shackleton ad: 
 
 Men wanted for hazardous journey. Low wages, bitter cold, long hours of complete darkness. Safe return doubtful. Honour and recognition in event of success
@@ -24,3 +26,4 @@ Thesis:
 
 Email address: dino.ilievski@gmail.com
 X: @realkdi
+

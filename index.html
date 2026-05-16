@@ -107,6 +107,10 @@
             max-width: 54ch;
         }
 
+        .block p + p {
+            margin-top: 1rem;
+        }
+
         /* ── FIVE THINGS ── */
         .five {
             padding: 2.8rem 0;
@@ -201,6 +205,46 @@
             color: var(--dim);
         }
 
+        /* ── THESIS ── */
+        .thesis {
+            padding: 3rem 0;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .thesis-label {
+            font-family: var(--sans);
+            font-size: 0.6rem;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--dim);
+            margin-bottom: 1.6rem;
+        }
+
+        .thesis-list {
+            list-style: none;
+        }
+
+        .thesis-list li {
+            padding: 1rem 0;
+            border-top: 1px solid var(--rule);
+            font-size: 1.25rem;
+            line-height: 1.55;
+        }
+
+        .thesis-list li:last-child {
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .thesis-list li strong {
+            font-weight: 700;
+        }
+
+        .thesis-list li span.thesis-desc {
+            color: var(--dim);
+            font-style: italic;
+        }
+
         /* ── THE OFFER ── */
         .offer {
             padding: 3.5rem 0 4rem;
@@ -223,7 +267,29 @@
 
         /* ── FOOTER ── */
         footer {
-            padding: 1.8rem 0 3.5rem;
+            padding: 2.4rem 0 3.5rem;
+        }
+
+        .contact {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .contact a {
+            font-family: var(--sans);
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            color: var(--black);
+            text-decoration: none;
+            border-bottom: 1px solid var(--rule);
+            padding-bottom: 2px;
+            transition: border-color 0.2s ease;
+        }
+
+        .contact a:hover {
+            border-color: var(--black);
         }
 
         footer p {
@@ -246,6 +312,8 @@
         .f3 { animation-delay: 0.24s; }
         .f4 { animation-delay: 0.38s; }
         .f5 { animation-delay: 0.52s; }
+        .f6 { animation-delay: 0.64s; }
+        .f7 { animation-delay: 0.76s; }
 
         @media (max-width: 560px) {
             .hero h1 { font-size: 3.2rem; }
@@ -276,7 +344,10 @@
     <!-- INTRO -->
     <div class="block f f3">
         <p>
-            As we approach the singularity, only five things are worth working on now.
+            As we approach the singularity (2045), only five things are worth working on now: AI, compute, BCI, longevity, and simulation.
+        </p>
+        <p>
+            But I'm only concerned with two things: creating a BCI to replace drugs, and solving social simulations.
         </p>
     </div>
 
@@ -308,18 +379,28 @@
         </div>
     </div>
 
+    <!-- THESIS -->
+    <div class="thesis f f5">
+        <p class="thesis-label">Thesis</p>
+        <ol class="thesis-list" id="thesis">
+            <li><strong>Massive ambition.</strong> <span class="thesis-desc">You must have a vision for a vast conquest of market.</span></li>
+            <li><strong>Massive devotion.</strong> <span class="thesis-desc">You must have surrounding devotion from your co-founders, employees, and customers.</span></li>
+        </ol>
+    </div>
+
     <!-- THE OFFER -->
-    <div class="offer f f5">
+    <div class="offer f f6">
         <p>
-            If you are working on one of these things and need human or financial capital, I will meet with you.
-        </p>
-        <p>
-            If I think you're a future Napoleon, <strong>I'll fund you.</strong>
+            If you are working on these things, and need human or financial capital, <strong>I will meet with you.</strong>
         </p>
     </div>
 
     <!-- FOOTER -->
-    <footer>
+    <footer class="f f7">
+        <div class="contact" id="contact">
+            <a href="mailto:dino.ilievski@gmail.com">dino.ilievski@gmail.com</a>
+            <a href="https://x.com/realkdi" target="_blank" rel="noopener">@realkdi</a>
+        </div>
         <p>Charismatic Authority &mdash; 2026</p>
     </footer>
 
