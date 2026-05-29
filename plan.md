@@ -1,29 +1,21 @@
-Website design
+I’m Dino Ilievski. I started out as a corporate lawyer, quit to become an investor. Founded a startup, now I manage my own charismatic capital. I will help you create yours. 
 
-Black font, white background. 
+What is charismatic capital? It’s the aggregation of your human, network and financial capital. 
 
-Charismatic Authority (title)
-
-Definition: the authority of the leader derives from the personal charisma of the leader.
-
-
-introduction:
-
-As we approach the singularity (2045), Only five things worth working on now: AI, compute, BCI, longevity and simulation. 
-
-But i'm only concerned with two things: creating a BCI to replace drugs, and solving social simulations. 
-
+Searching for: 
 Insert shackleton ad: 
+Men wanted for hazardous journey. Low wages, bitter cold, long hours of complete darkness. Safe return doubtful. Honour and recognition in event of success. 
 
-Men wanted for hazardous journey. Low wages, bitter cold, long hours of complete darkness. Safe return doubtful. Honour and recognition in event of success
+Problem-Spaces
+Making social simulations accurate and valuable. 
+Creating digital twins/ creating viable AI persons. 
+Making a BCI to simulate drugs for recreational purposes. 
 
-If you are working on these things, and need human or financial capital, I will meet with you. 
+Payoff:
+If you are working on these things, or something within their penumbra, and need charismatic capital, I will meet with you. I will join and invest in a startup, contributing my charismatic capital.  
 
-Thesis: 
+Invite:
+Email to schedule a meeting. Only in person meetings in SF. 
 
-1. Massive ambition. You must a have vision for a vast conquest of market. 
-2. Massive devotion. You must have surrounding devotion from your co-founders, employees, and customers.
-
-Email address: dino.ilievski@gmail.com
-X: @realkdi
-
+email: [EMAIL_ADDRESS]
+dino.ilievski@gmail.com
