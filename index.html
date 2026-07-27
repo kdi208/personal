@@ -3,316 +3,423 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dino Ilievski — USA Robotics & Charismatic Capital</title>
-  <meta name="description" content="Personal website of Dino Ilievski. Outlier problem solver, USA Robotics (manifestrobots.com), Charismatic Capital startup investor & advisor, and essays on technology & society.">
+  <title>Dino Ilievski — USA Robotics</title>
+  <meta name="description" content="Dino Ilievski. Building domestic supply chains for next-generation humanoid and industrial robots in the United States.">
   
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Dino Ilievski — Personal Website">
-  <meta property="og:description" content="Building USA Robotics & advising outlier founders. Essays and principles.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dino Ilievski — USA Robotics">
+  <meta property="og:description" content="Working on domestic supply chains for humanoid and industrial robots in the United States.">
   <meta property="og:type" content="website">
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --bg: #fafafa;
+      --fg: #111;
+      --muted: #555;
+      --border: #e5e5e5;
+      --accent: #111;
+      --card: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      background: rgba(250, 250, 250, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+
+    .brand {
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: -0.01em;
+    }
+
+    .nav {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav a {
+      font-size: 14px;
+      color: var(--muted);
+      transition: color 0.15s;
+    }
+
+    .nav a:hover {
+      color: var(--fg);
+    }
+
+    .socials {
+      display: flex;
+      gap: 12px;
+    }
+
+    .socials a {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .socials a:hover {
+      color: var(--fg);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 80px 0 64px;
+    }
+
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 20px;
+      letter-spacing: 0.02em;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      background: #22c55e;
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      font-weight: 650;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      border-bottom: 2px solid var(--fg);
+    }
+
+    .hero-bio {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 540px;
+      line-height: 1.65;
+    }
+
+    /* Sections */
+    .section {
+      padding: 56px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      font-weight: 650;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+
+    /* Manifest card */
+    .manifest-card {
+      display: block;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+
+    .manifest-card:hover {
+      border-color: #ccc;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+    }
+
+    .manifest-title {
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .manifest-title svg {
+      width: 14px;
+      height: 14px;
+      opacity: 0.5;
+    }
+
+    .manifest-desc {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* Seminar */
+    .seminar-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px;
+      margin-top: 20px;
+    }
+
+    .seminar-box h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .seminar-box p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    /* Essay */
+    .essay {
+      margin-top: 8px;
+    }
+
+    .essay-meta {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 12px;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .essay-badge {
+      background: #eee;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .essay h3 {
+      font-size: 20px;
+      font-weight: 650;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .essay-body h4 {
+      font-size: 15px;
+      font-weight: 600;
+      margin: 28px 0 10px;
+    }
+
+    .essay-body p {
+      font-size: 15px;
+      color: #333;
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    .essay-body strong {
+      font-weight: 600;
+    }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+      margin-top: 40px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+      .nav {
+        display: none;
+      }
+      .hero {
+        padding: 56px 0 48px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ----------------------------------------------------------------------- -->
-  <!-- STICKY HEADER                                                           -->
-  <!-- ----------------------------------------------------------------------- -->
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#intro" class="brand-logo">
-        <span class="brand-avatar">D</span>
-        <span>Dino Ilievski</span>
-      </a>
-
+      <a href="#top" class="brand">Dino Ilievski</a>
       <nav>
-        <ul class="nav-menu" id="navMenu">
-          <li><a href="#intro" class="nav-link active">About</a></li>
-          <li><a href="#robotics" class="nav-link">USA Robotics</a></li>
-          <li><a href="#capital" class="nav-link">Charismatic Capital</a></li>
-          <li><a href="#essays" class="nav-link">Essays</a></li>
+        <ul class="nav">
+          <li><a href="#robotics">USA Robotics</a></li>
+          <li><a href="#thinking">Thinking</a></li>
         </ul>
       </nav>
-
-      <!-- Header Social Links as requested in plan.md -->
-      <div class="header-socials">
-        <a href="https://x.com/realkdi" target="_blank" rel="noopener noreferrer" class="social-btn" id="header-x-link" aria-label="X Profile">
-          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          <span>X</span>
-        </a>
-        <a href="https://linkedin.com/in/realkdi" target="_blank" rel="noopener noreferrer" class="social-btn" id="header-linkedin-link" aria-label="LinkedIn Profile">
-          <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-          <span>LinkedIn</span>
-        </a>
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
-          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
-        </button>
+      <div class="socials">
+        <a href="https://x.com/realkdi" target="_blank" rel="noopener">X</a>
+        <a href="https://linkedin.com/in/realkdi" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
   </header>
 
-  <main class="container">
+  <main class="container" id="top">
 
-    <!-- --------------------------------------------------------------------- -->
-    <!-- HERO / INTRO SECTION                                                  -->
-    <!-- --------------------------------------------------------------------- -->
-    <section class="hero-section" id="intro">
-      <div class="hero-pill">
-        <span class="pulsing-dot"></span>
-        <span>Robotics & Startup Advisory</span>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-label">
+        <span class="dot"></span>
+        <span>USA Robotics</span>
       </div>
-
-      <h1 class="hero-title">
-        I'm <em>Dino Ilievski</em>. Making robots in the USA & backing founders with conviction.
-      </h1>
-
+      <h1>Working on domestic supply chains for <em>humanoid and industrial robots</em>.</h1>
       <p class="hero-bio">
-        Passionate about working on hard, outlier problems. Deeply experienced collaborating with engineers, sales, legal, and ops teams to transform bold ideas into operational reality.
+        Former lawyer and AI co-founder. Focused on the hard problem of building resilient, onshore component supply for next-generation robotics in the United States.
+      </p>
+    </section>
+
+    <!-- USA Robotics -->
+    <section class="section" id="robotics">
+      <div class="section-label">USA Robotics</div>
+      <h2 class="section-title">Rebuilding the American robotics supply chain</h2>
+
+      <p style="color: var(--muted); margin-bottom: 24px; font-size: 15px; line-height: 1.65;">
+        Most humanoid and industrial robot hardware still depends on foreign supply chains. 
+        Critical components — especially firmware-bearing parts — need to be manufactured domestically 
+        if the United States is going to field these systems at scale with acceptable control and safety.
       </p>
 
-      <div class="pillars-grid">
-        <div class="pillar-card robotics">
-          <span class="pillar-num">01 / Hardware & Supply Chain</span>
-          <h3 class="pillar-title">USA Robotics</h3>
-          <p class="pillar-desc">
-            On-shoring critical robotics manufacturing and sourcing components directly from US vendors.
-          </p>
+      <a href="https://manifestrobots.com" target="_blank" rel="noopener" class="manifest-card">
+        <div class="manifest-title">
+          manifestrobots.com
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H5v12h12v-6h2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg>
         </div>
-
-        <div class="pillar-card">
-          <span class="pillar-num">02 / High-Conviction Backing</span>
-          <h3 class="pillar-title">Charismatic Capital</h3>
-          <p class="pillar-desc">
-            Advising and investing in ambitious founders with conviction to conquer the world.
-          </p>
+        <div class="manifest-desc">
+          A curated directory of U.S. manufacturers and suppliers of components for humanoid robots, industrial robots, and drones.
         </div>
-      </div>
-    </section>
+      </a>
 
-    <!-- --------------------------------------------------------------------- -->
-    <!-- USA ROBOTICS SECTION                                                  -->
-    <!-- --------------------------------------------------------------------- -->
-    <section class="section" id="robotics">
-      <div class="section-header">
-        <span class="section-eyebrow">01 / USA Robotics</span>
-        <h2 class="section-title">Rebuilding the American Robotics Supply Chain</h2>
-      </div>
-
-      <div class="robotics-box">
-        <div class="robotics-content">
-          <p class="robotics-lead">
-            Find all the parts you need to build next-generation humanoid and industrial robots from vendors manufacturing right here in the USA.
-          </p>
-
-          <a href="https://manifestrobots.com" target="_blank" rel="noopener noreferrer" class="manifest-card" id="manifest-link">
-            <div class="manifest-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            </div>
-            <div>
-              <div class="manifest-text-title">
-                <span>manifestrobots.com</span>
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H5v12h12v-6h2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg>
-              </div>
-              <span class="manifest-text-sub">USA Hardware Vendor Directory & Ecosystem</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- --------------------------------------------------------------------- -->
-    <!-- CHARISMATIC CAPITAL SECTION                                           -->
-    <!-- --------------------------------------------------------------------- -->
-    <section class="section" id="capital">
-      <div class="section-header">
-        <span class="section-eyebrow">02 / Charismatic Capital</span>
-        <h2 class="section-title">Advising & Investing in Outlier Founders</h2>
-      </div>
-
-      <div class="capital-box">
-        <p class="capital-pitch">
-          Advising and investing in founders with conviction to conquer the world and build a cult following. Industry agnostic. Flexible check size at the seed stage.
+      <div class="seminar-box">
+        <h3>Humanity’s Last Supply Chain</h3>
+        <p>
+          Weekly seminar on strategies for achieving domestic supply chain independence for robotics in the United States.
         </p>
-
-        <div class="capital-tags">
-          <span class="capital-tag">Seed Checks</span>
-          <span class="capital-tag">Industry Agnostic</span>
-          <span class="capital-tag">Cult Followings</span>
-          <span class="capital-tag">Founder Advisory</span>
-        </div>
-
-        <div class="cta-box">
-          <div class="cta-text">
-            <strong>Seeking candid perspective on your startup?</strong><br>
-            Book a session for direct, unfiltered feedback.
-          </div>
-          <a href="https://luma.com/honestfeedback" target="_blank" rel="noopener noreferrer" class="btn-primary" id="luma-feedback-btn">
-            <span>Book Honest Feedback</span>
-            <svg viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"/></svg>
-          </a>
-        </div>
       </div>
     </section>
 
-    <!-- --------------------------------------------------------------------- -->
-    <!-- GREAT ARTIST / ESSAYS SECTION                                         -->
-    <!-- --------------------------------------------------------------------- -->
-    <section class="section" id="essays">
-      <div class="section-header">
-        <span class="section-eyebrow">03 / Principles & Views</span>
-        <h2 class="section-title">Great Artist Essays</h2>
-      </div>
+    <!-- Thinking / Essay -->
+    <section class="section" id="thinking">
+      <div class="section-label">Thinking</div>
+      <h2 class="section-title">The Robotics Issue Nobody Is Talking About</h2>
 
-      <div class="essays-container">
-        <!-- Navigation Tabs -->
-        <div class="essay-tabs" role="tablist">
-          <button class="tab-btn active" data-target="essay-1" role="tab" id="tab-essay-1">
-            1. Adult Adoption: A Romantic Solution
-          </button>
-          <button class="tab-btn" data-target="essay-2" role="tab" id="tab-essay-2">
-            2. The Robotics Issue Nobody Is Talking About
-          </button>
+      <article class="essay">
+        <div class="essay-meta">
+          <span class="essay-badge">Essay</span>
+          <span>Robotics & Policy</span>
         </div>
 
-        <!-- ESSAY 1 -->
-        <article class="essay-card active" id="essay-1" role="tabpanel">
-          <div class="essay-meta">
-            <span class="essay-badge">Essay 01</span>
-            <span>5 min read</span>
-            <span>•</span>
-            <span>Principles & Views</span>
-          </div>
+        <div class="essay-body">
+          <h4>The Future Issue</h4>
+          <p>
+            Our future is going to be fantastic. Humanoid robots are going to make manual labor a thing of the past. All the factories will be automated using humanoid robots. We will have all our deliveries done by robots. Our children will be handled by humanoid robots. Our pets will be taken care of by humanoids. Humanoid robots, as tall as us, as physically capable as us, will be armed as our police force. They will do all of the heavy industry, all of the light industry, all retail jobs, all medical services. They will be present, optimizing our entire economy. This will create a difficult to imagine amount of economic surplus, forcing our monkey brains to work to conceive of such abundance.
+          </p>
+          <p>
+            We never had this ability before, to create perfect physical substitutes for us. These robots will have dexterous hands, being double or triple jointed, capable of pivoting one way or another. Much in the same manner, our future can go one way or another. Instead of optimizing our lives, how will we know that these robots won’t harm us?
+          </p>
+          <p>
+            Currently, nearly all robots, and all humanoid robots, are made in China. This seems strange given how restrictive the American government has been of other Chinese-made technology. The United States has restricted China from selling its surveillance equipment here due to trust issues. Similarly, it prevented China from selling electric vehicles here due to unfair trade practices. How then can we trust China to manufacture humanoid robots, capable of being among us, with us, and between us, at all times ready to overpower us? Will we really trust or even want to have the hundreds of millions of omni-present, omni-potent humanoid robots being manufactured in China? While the answer is obviously no, our current trajectory has us sleep-walking into that outcome.
+          </p>
+          <p>
+            There are a few nightmare scenarios for having our robots manufactured in China. First, the parts made with chips, such as the actuators and the sensors, can be programmed to conduct espionage. The robots could record activities in commercial spaces, violating trade secrets, state secrets, and in the home, violating personal privacy. We solved this issue with phones manufactured in China — we can potentially solve it for robots too. The difference here is that humanoids can affect the physical world whereas phones were solely communication devices. Which leads to the second fear, the fear of autonomous physical agents negatively interacting with our economy. They could steal resources, destroy property, or even harm people.
+          </p>
+          <p>
+            Given these possible outcomes, it is reasonable to expect American startups to be focused on the issue of on-shoring the humanoid robotics supply chain. Yet, it is the opposite. Of all the companies developing humanoids, only Tesla has dedicated itself to vertically integrating the manufacturing of robots in the United States. The other companies are developing their software while relying exclusively on Chinese-made robots. Why? First, humanoid robotics are still considered an emerging technology that will need a few more years to be finished. The startups building the brain for these robots are only focused on solving the software issue, believing the hardware to be already solved. Second, these companies assume that it’s fine to manufacture the robots in China if the control software, the brain, is created by American companies. The firmware cannot harm the operator of the robot. Third, it is a matter of convenience and speed. Sourcing parts is a nightmare, especially in the opaque supply chain world. Chinese companies ship both parts and complete humanoids ready for usage by the robotics companies.
+          </p>
 
-          <h3 class="essay-header-title">Adult adoption: a Romantic solution</h3>
-
-          <div class="essay-body">
-            <p>
-              We need to return to the Roman practice of adult adoption. The practice of legally adopting a young adult into one’s family to inherit both last name, as well as wealth and prestige.
-            </p>
-            <p>
-              Too many people today are too content with keeping their wealth indexed to the general economy, returning a subtle 2% after inflation. They need to take bigger risks with their wealth. Both selfishly and societally, adopting adults will yield greater returns. Now is the time to return this practice.
-            </p>
-            <p>
-              The most similar practice today is a scholarship. Many wealthy people will underwrite a scholarship, give a few thousand to a young adult and then meet for a few dinner and photo ops. But why stop there? Why not go further?
-            </p>
-            <p>
-              Imagine they were to undertake a bigger financial stake with that young adult. It’s a bigger risk but the upside is massive. The young adult could tap into that patron's network and financial capital to create something wonderful and profit generating.
-            </p>
-            <p>
-              The closest analogy is a startup and angel investor relationship. The startup is typically created by young adults and funded by a single or a few angel investors. The startup gains funding it wouldn’t have received otherwise. The angel gets massive upside, out earning the economy and most investors. Moreover, society benefits the most by receiving the economic surplus from the startup. Win, win, win.
-            </p>
-            <p>
-              Yet this is too limited. The network capital isn’t transferred from angel to founder because both sides have weak attachments. The relationship suffers from each side viewing it as merely transactional.
-            </p>
-            <p>
-              It could be more though. Both sides could commit (scary word) to each other more. The founders could take less money. The angels could fund less founders. By doing so, they would be incentivized to help each other succeed much more.
-            </p>
-            <p>
-              This model could be used for many young people to be matched with wealthy patrons. The young receive financial and network capital when they need it most, in the inception of their careers. The wealthy receive upside in the youth’s human and charismatic capital.
-            </p>
-            <p>
-              Imagine the upside having invested in an early Steve Jobs. There are many Steve Jobs currently that are on the fence. They need a chance to shine. Adult adoption, of the form I’m prescribing, would give them just that chance.
-            </p>
-            <p>
-              Likewise, many wealthy people keep buying houses, yachts, planes and accumulating slow wealth. Imagine if they could finance the next Steve Jobs instead? Just to be advisor and patron to such a talent would be invigorating, let alone the money.
-            </p>
-            <p>
-              And imagine from society’s perspective, if Steve Jobs had left his Apple shares and title to someone like Sam Altman? Such financial capital at a young age with so much human capital. A tremendous amount of innovation would have happened a lot sooner.
-            </p>
-            <p>
-              The faster we enable intra generational capital transfer, the faster we grow as a society. The more we sit on the notion of adult adoption, the more we delay a greater future.
-            </p>
-          </div>
-
-          <div class="essay-footer">
-            <button class="share-btn" data-title="Adult adoption: a Romantic solution">
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
-              <span>Share Essay</span>
-            </button>
-          </div>
-        </article>
-
-        <!-- ESSAY 2 -->
-        <article class="essay-card" id="essay-2" role="tabpanel">
-          <div class="essay-meta">
-            <span class="essay-badge">Essay 02</span>
-            <span>8 min read</span>
-            <span>•</span>
-            <span>Robotics & Policy</span>
-          </div>
-
-          <h3 class="essay-header-title">The Robotics Issue Nobody Is Talking About</h3>
-
-          <div class="essay-body">
-            <h3>The Future Issue</h3>
-            <p>
-              Our future is going to be fantastic. Humanoid robots are going to make manual labor a thing of the past. All the factories will be automated using humanoid robots. We will have all our deliveries done by robots. Our children will be handled by humanoid robots. Our pets will be taken care of by humanoids. Humanoids robots, as tall as us, as physically capable as us, will be armed as our police force. They will do all of the heavy industry, all of the light industry, all retail jobs, all medical services. They will be present, optimizing our entire economy. This will create a difficult to imagine amount of economic surplus, forcing our monkey brains to work to conceive of such abundance.
-            </p>
-            <p>
-              We never had this ability before, to create perfect physical substitutes for us. These robots will have dexterous hands, being double or triple jointed, capable of pivoting one way or another. Much in the same manner, our future can go one way or another. Instead of optimizing our lives, how will we know that these robots won’t harm us?
-            </p>
-            <p>
-              Currently, nearly all robots, and all humanoid robots, are made in China. This seems strange given how restrictive the American government has been of other Chinese-made technology. The United States has restricted China from selling its surveillance equipment here due to trust issues. Similarly, it prevented China from selling electric vehicles here due to unfair trade practices. How then can we trust China to manufacture humanoid robots, capable of being among us, with us, and between us, at all times ready to overpower us? Will we really trust or even want to have the hundreds of millions of omni-present, omni-potent humanoid robots being manufactured in China? While the answer is obviously no, our current trajectory has us sleep-walking into that outcome.
-            </p>
-            <p>
-              There are a few nightmare scenarios for having our robots manufactured in China. First, the parts made with chips, such as the actuators and the sensors, can be programmed to conduct espionage. The robots could record activities in commercial spaces, violating trade secrets, state secrets, and in the home, violating personal privacy. We solved this issue with phones manufactured in China - we can potentially solve it for robots too. The difference here is that humanoids can affect the physical world whereas phones were solely communication devices. Which leads to the second fear, the fear of autonomous physical agents negatively interacting with our economy. They could steal resources, destroy property, or even harm people.
-            </p>
-            <p>
-              Given these possible outcomes, it is reasonable to expect American startups to be focused on the issue of on-shoring the humanoid robotics supply chain. Yet, it is the opposite. Of all the companies developing humanoids, only Tesla has dedicated itself to vertically integrating the manufacturing of robots in the United States. The other companies are developing their software while relying exclusively on Chinese-made robots. Why? First, humanoid robotics are still considered an emerging technology that will need a few more years to be finished. The startups building the brain for these robots are only focused on solving the software issue, believing the hardware to be already solved. Second, these companies assume that it’s fine to manufacture the robots in China if the control software, the brain, is created by American companies. The firmware cannot harm the operator of the robot. Third, it is a matter of convenience and speed. Sourcing parts is a nightmare, especially in the opaque supply chain world. Chinese companies ship both parts and complete humanoids ready for usage by the robotics companies.
-            </p>
-
-            <h3>The Potential Solutions</h3>
-            <p>
-              Based on where each part of the stack of the humanoid robot is created, we can create a useful categorization of different availability and safety profiles for these robots to be used in the United States.
-            </p>
-            <p>
-              <strong>First, humanoid robots with all parts created in the United States.</strong> This means that software and hardware stack is entirely within the United States. This outcome would be the most expensive as it would require creating an entire robotics supply chain within the United States. The company taking this approach is Tesla, which has had success with vertically integrating electric vehicle production in the United States. It would mean the production of chips, which has the most complicated supply chain. This route is possible but very unlikely unless Tesla succeeds or the United States government heavily subsidizes it like it does the United States military supply chain. Even if it does happen, this route will be the most expensive until the robots begin to automate the supply chain.
-            </p>
-            <p>
-              <strong>Second, humanoid robots with all parts created outside the United States.</strong> This outcome would mean effectively no control over safety of these robots, both from foreign-control and from autonomous AI issues. There is absolutely zero chance that such robots will be permitted by the United States government. Thus, the United States would have no humanoid robots. This seems like the most unlikely route unless the American companies completely abandon software for robotics.
-            </p>
-            <p>
-              <strong>Third, humanoid robots with software created in the United States and hardware created in China.</strong> This seems like the most likely outcome as it is the current effective strategy of most robotic companies in the United States. This gives limited safety control. The brain would be programmed by the American companies but the firmware would still remain a source of safety concern. Foreign control of the robots could not be ruled out. Currently the government seems content to permit these robots but their effectiveness and number are quite insignificant. When that changes, the government will ban these humanoid robots to prevent any chance of Chinese control over millions of humanoids within the United States.
-            </p>
-            <p>
-              <strong>Fourth, humanoids with both software and firm-ware parts created in the United States.</strong> This outcome would require that the firm-ware parts are manufactured in the United States with enough scale that they are affordable. Such an outcome is possible, and certainly feasible given that it requires the manufacturing of only a few select parts. However, such an approach gives the highest level of safety control while avoiding some costs associated with manufacturing all the hardware.
-            </p>
-            <p>
-              All these outcomes are contingent on the choices of the United States government and the robotic companies. Many were not aware of the state of the field, ready to sleep-walk into the most likely outcome. We believe in a prosperous future. To achieve it, we believe that the economy will require humanoid robots. To have them, we will need all companies to begin to actively shift as much of their supply chain to the United States as possible as early as possible. This technology is too potent to be excluded from the United States. And make no mistake, unless the critical firmware-parts are manufactured in the United States, there will be no humanoid robots. There will be no prosperous future.
-            </p>
-          </div>
-
-          <div class="essay-footer">
-            <button class="share-btn" data-title="The Robotics Issue Nobody Is Talking About">
-              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
-              <span>Share Essay</span>
-            </button>
-          </div>
-        </article>
-
-      </div>
+          <h4>The Potential Solutions</h4>
+          <p>
+            Based on where each part of the stack of the humanoid robot is created, we can create a useful categorization of different availability and safety profiles for these robots to be used in the United States.
+          </p>
+          <p>
+            <strong>First, humanoid robots with all parts created in the United States.</strong> This means that software and hardware stack is entirely within the United States. This outcome would be the most expensive as it would require creating an entire robotics supply chain within the United States. The company taking this approach is Tesla, which has had success with vertically integrating electric vehicle production in the United States. It would mean the production of chips, which has the most complicated supply chain. This route is possible but very unlikely unless Tesla succeeds or the United States government heavily subsidizes it like it does the United States military supply chain. Even if it does happen, this route will be the most expensive until the robots begin to automate the supply chain.
+          </p>
+          <p>
+            <strong>Second, humanoid robots with all parts created outside the United States.</strong> This outcome would mean effectively no control over safety of these robots, both from foreign-control and from autonomous AI issues. There is absolutely zero chance that such robots will be permitted by the United States government. Thus, the United States would have no humanoid robots. This seems like the most unlikely route unless the American companies completely abandon software for robotics.
+          </p>
+          <p>
+            <strong>Third, humanoid robots with software created in the United States and hardware created in China.</strong> This seems like the most likely outcome as it is the current effective strategy of most robotic companies in the United States. This gives limited safety control. The brain would be programmed by the American companies but the firmware would still remain a source of safety concern. Foreign control of the robots could not be ruled out. Currently the government seems content to permit these robots but their effectiveness and number are quite insignificant. When that changes, the government will ban these humanoid robots to prevent any chance of Chinese control over millions of humanoids within the United States.
+          </p>
+          <p>
+            <strong>Fourth, humanoids with both software and firmware parts created in the United States.</strong> This outcome would require that the firmware parts are manufactured in the United States with enough scale that they are affordable. Such an outcome is possible, and certainly feasible given that it requires the manufacturing of only a few select parts. However, such an approach gives the highest level of safety control while avoiding some costs associated with manufacturing all the hardware.
+          </p>
+          <p>
+            All these outcomes are contingent on the choices of the United States government and the robotic companies. Many were not aware of the state of the field, ready to sleep-walk into the most likely outcome. We believe in a prosperous future. To achieve it, we believe that the economy will require humanoid robots. To have them, we will need all companies to begin to actively shift as much of their supply chain to the United States as possible as early as possible. This technology is too potent to be excluded from the United States. And make no mistake, unless the critical firmware-parts are manufactured in the United States, there will be no humanoid robots. There will be no prosperous future.
+          </p>
+        </div>
+      </article>
     </section>
 
   </main>
 
-  <!-- ----------------------------------------------------------------------- -->
-  <!-- FOOTER                                                                  -->
-  <!-- ----------------------------------------------------------------------- -->
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="footer-copy">
-        © 2026 Dino Ilievski. All rights reserved.
-      </div>
+      <div>© 2026 Dino Ilievski</div>
       <div>
-        <a href="#intro" class="back-to-top">
-          <span>Back to top</span>
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
-        </a>
+        <a href="mailto:dino.ilievski@gmail.com">dino.ilievski@gmail.com</a>
       </div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
