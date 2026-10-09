@@ -3,529 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dino Ilievski — USA Robotics</title>
-  <meta name="description" content="Dino Ilievski. Building domestic supply chains for next-generation humanoid and industrial robots in the United States.">
-  
-  <!-- Open Graph -->
-  <meta property="og:title" content="Dino Ilievski — USA Robotics">
-  <meta property="og:description" content="Working on domestic supply chains for humanoid and industrial robots in the United States.">
+  <title>Dino Ilievski</title>
+  <meta name="description" content="Dino Ilievski. People shaper. Working on robots in the United States, founders, and agentic alignment.">
+  <link rel="canonical" href="https://personal-one-blue.vercel.app/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#FBF9F5">
+
+  <meta property="og:title" content="Dino Ilievski">
+  <meta property="og:description" content="People shaper. Working on robots in the United States, founders, and agentic alignment.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://personal-one-blue.vercel.app/">
+  <meta property="og:image" content="https://personal-one-blue.vercel.app/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dino Ilievski">
+  <meta name="twitter:description" content="People shaper. Working on robots in the United States, founders, and agentic alignment.">
+  <meta name="twitter:image" content="https://personal-one-blue.vercel.app/og.png">
 
-  <style>
-    :root {
-      --bg: #fafafa;
-      --fg: #111;
-      --muted: #555;
-      --border: #e5e5e5;
-      --accent: #111;
-      --card: #fff;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--fg);
-      line-height: 1.6;
-      font-size: 16px;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* Header */
-    .site-header {
-      position: sticky;
-      top: 0;
-      background: rgba(250, 250, 250, 0.92);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border);
-      z-index: 100;
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 60px;
-    }
-
-    .brand {
-      font-weight: 600;
-      font-size: 15px;
-      letter-spacing: -0.01em;
-    }
-
-    .nav {
-      display: flex;
-      gap: 28px;
-      list-style: none;
-    }
-
-    .nav a {
-      font-size: 14px;
-      color: var(--muted);
-      transition: color 0.15s;
-    }
-
-    .nav a:hover {
-      color: var(--fg);
-    }
-
-    .socials {
-      display: flex;
-      gap: 12px;
-    }
-
-    .socials a {
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .socials a:hover {
-      color: var(--fg);
-    }
-
-    /* Hero */
-    .hero {
-      padding: 80px 0 64px;
-    }
-
-    .hero-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 20px;
-      letter-spacing: 0.02em;
-    }
-
-    .dot {
-      width: 7px;
-      height: 7px;
-      background: #22c55e;
-      border-radius: 50%;
-    }
-
-    .hero h1 {
-      font-size: 36px;
-      font-weight: 650;
-      letter-spacing: -0.03em;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
-
-    .hero h1 em {
-      font-style: normal;
-      border-bottom: 2px solid var(--fg);
-    }
-
-    .hero-bio {
-      font-size: 17px;
-      color: var(--muted);
-      max-width: 540px;
-      line-height: 1.65;
-    }
-
-    /* Sections */
-    .section {
-      padding: 56px 0;
-      border-top: 1px solid var(--border);
-    }
-
-    .section-label {
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 12px;
-    }
-
-    .section-title {
-      font-size: 24px;
-      font-weight: 650;
-      letter-spacing: -0.02em;
-      margin-bottom: 24px;
-    }
-
-    /* Manifest card */
-    .manifest-card {
-      display: block;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 24px;
-      transition: border-color 0.15s, box-shadow 0.15s;
-    }
-
-    .manifest-card:hover {
-      border-color: #ccc;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
-    }
-
-    .manifest-title {
-      font-weight: 600;
-      font-size: 16px;
-      margin-bottom: 6px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .manifest-title svg {
-      width: 14px;
-      height: 14px;
-      opacity: 0.5;
-    }
-
-    .manifest-desc {
-      font-size: 14px;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
-    /* Seminar */
-    .seminar-box {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 24px;
-      margin-top: 20px;
-    }
-
-    .seminar-box h3 {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .seminar-box p {
-      font-size: 14px;
-      color: var(--muted);
-    }
-
-    /* Essay */
-    .essay {
-      margin-top: 8px;
-    }
-
-    .essay-meta {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 12px;
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-
-    .essay-badge {
-      background: #eee;
-      padding: 2px 8px;
-      border-radius: 4px;
-      font-size: 12px;
-      font-weight: 500;
-    }
-
-    .essay h3 {
-      font-size: 20px;
-      font-weight: 650;
-      letter-spacing: -0.02em;
-      margin-bottom: 20px;
-    }
-
-    .essay-body h4 {
-      font-size: 15px;
-      font-weight: 600;
-      margin: 28px 0 10px;
-    }
-
-    .essay-body p {
-      font-size: 15px;
-      color: #333;
-      margin-bottom: 16px;
-      line-height: 1.7;
-    }
-
-    .essay-body ol {
-      margin: 0 0 16px 1.25em;
-      font-size: 15px;
-      color: #333;
-      line-height: 1.7;
-    }
-
-    .essay-body li {
-      margin-bottom: 6px;
-    }
-
-    .essay-body strong {
-      font-weight: 600;
-    }
-
-    /* Footer */
-    .site-footer {
-      border-top: 1px solid var(--border);
-      padding: 32px 0;
-      margin-top: 40px;
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    /* Mobile */
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 28px;
-      }
-      .nav {
-        display: none;
-      }
-      .hero {
-        padding: 56px 0 48px;
-      }
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#top" class="brand">Dino Ilievski</a>
-      <nav>
-        <ul class="nav">
-          <li><a href="#robotics">USA Robotics</a></li>
-          <li><a href="#thinking">Thinking</a></li>
+      <a href="#intro" class="brand-logo">
+        <span class="brand-avatar" aria-hidden="true">D</span>
+        <span>Dino Ilievski</span>
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#robotics" class="nav-link">Robotics</a></li>
+          <li><a href="#capital" class="nav-link">Capital</a></li>
+          <li><a href="#alignment" class="nav-link">Alignment</a></li>
+          <li><a href="essay.html" class="nav-link">Thinking</a></li>
+          <li><a href="https://calendar.app.google/ZNhWDkPHRFbm629B9" class="nav-link" target="_blank" rel="noopener noreferrer">Calendar<span class="sr-only"> (opens in a new tab)</span></a></li>
         </ul>
       </nav>
-      <div class="socials">
-        <a href="https://x.com/realkdi" target="_blank" rel="noopener">X</a>
-        <a href="https://linkedin.com/in/realkdi" target="_blank" rel="noopener">LinkedIn</a>
+
+      <div class="header-socials">
+        <a href="https://x.com/realkdi" target="_blank" rel="noopener noreferrer" class="social-btn">X<span class="sr-only"> (opens in a new tab)</span></a>
+        <a href="https://linkedin.com/in/realkdi" target="_blank" rel="noopener noreferrer" class="social-btn">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>
+        <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navMenu">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </button>
       </div>
     </div>
   </header>
 
-  <main class="container" id="top">
-
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero-label">
-        <span class="dot"></span>
-        <span>USA Robotics</span>
-      </div>
-      <h1>Working on domestic supply chains for <em>humanoid and industrial robots</em>.</h1>
-      <p class="hero-bio">
-        Former lawyer and AI co-founder. Focused on the hard problem of building resilient, onshore component supply for next-generation robotics in the United States.
+  <main class="container" id="main">
+    <section class="hero-section" id="intro">
+      <h1 class="hero-title">People shaper.</h1>
+      <ul class="work-list">
+        <li><a href="#robotics">Making robots in the United States</a></li>
+        <li><a href="#capital">Advising and investing in founders</a></li>
+        <li><a href="#alignment">Working on agentic alignment</a></li>
+      </ul>
+      <p class="link-row">
+        <a class="text-link" href="https://calendar.app.google/ZNhWDkPHRFbm629B9" target="_blank" rel="noopener noreferrer">Calendar<span class="sr-only"> (opens in a new tab)</span></a>
       </p>
     </section>
 
-    <!-- USA Robotics -->
     <section class="section" id="robotics">
-      <div class="section-label">USA Robotics</div>
-      <h2 class="section-title">Rebuilding the American robotics supply chain</h2>
-
-      <p style="color: var(--muted); margin-bottom: 24px; font-size: 15px; line-height: 1.65;">
-        Most humanoid and industrial robot hardware still depends on foreign supply chains. 
-        Critical components — especially firmware-bearing parts — need to be manufactured domestically 
-        if the United States is going to field these systems at scale with acceptable control and safety.
+      <h2 class="section-title">USA Robotics</h2>
+      <p class="section-lead">Find all the parts you need to make robots from vendors manufacturing in the USA.</p>
+      <p class="link-row">
+        <a class="text-link" href="https://manifestrobots.com" target="_blank" rel="noopener noreferrer">manifestrobots.com<span class="sr-only"> (opens in a new tab)</span></a>
       </p>
-
-      <a href="https://manifestrobots.com" target="_blank" rel="noopener" class="manifest-card">
-        <div class="manifest-title">
-          manifestrobots.com
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3zM5 5h6v2H5v12h12v-6h2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"/></svg>
-        </div>
-        <div class="manifest-desc">
-          A curated directory of U.S. manufacturers and suppliers of components for humanoid robots, industrial robots, and drones.
-        </div>
-      </a>
-
-      <div class="seminar-box">
-        <h3>Humanity’s Last Supply Chain</h3>
-        <p>
-          Weekly seminar on strategies for achieving domestic supply chain independence for robotics in the United States.
-        </p>
-      </div>
     </section>
 
-    <!-- Thinking / Essay -->
+    <section class="section" id="capital">
+      <h2 class="section-title">Charismatic Capital</h2>
+      <p class="section-lead">Advising and investing in founders with conviction to conquer the world and a cult following. Agnostic to industry. Any seed check size.</p>
+      <p class="link-row">
+        <a class="text-link" href="https://calendar.app.google/ZNhWDkPHRFbm629B9" target="_blank" rel="noopener noreferrer">Calendar<span class="sr-only"> (opens in a new tab)</span></a>
+        <a class="text-link" href="https://luma.com/honestfeedback" target="_blank" rel="noopener noreferrer">Honest feedback<span class="sr-only"> (opens in a new tab)</span></a>
+      </p>
+    </section>
+
+    <section class="section" id="alignment">
+      <h2 class="section-title">Agentic alignment</h2>
+      <p class="section-lead">Working on agentic alignment.</p>
+    </section>
+
     <section class="section" id="thinking">
-      <div class="section-label">Thinking</div>
       <h2 class="section-title">The Robotics Issue Nobody Is Talking About</h2>
-
-      <article class="essay">
-        <div class="essay-meta">
-          <span class="essay-badge">Essay</span>
-          <span>Robotics & Policy</span>
-        </div>
-
-        <div class="essay-body">
-          <p>
-            Almost nothing is deployed yet.
-          </p>
-          <p>
-            Unitree’s IPO materials showed that 73.60% of its humanoid revenue in the first nine months of 2025 still came from research and education. On Tesla’s Q4 2025 earnings call in January 2026, Elon Musk stated that Optimus remained in the R&amp;D phase and was “not in usage in our factories in a material way.” Through the Q2 2026 call, the company continued to describe early units as oriented toward learning and data collection rather than productive factory work. The industrial and commercial rollout that everyone talks about has barely begun.
-          </p>
-          <p>
-            That is exactly why the supply chain question matters now. The decisions being made about where these machines are built will lock in long before the robots themselves scale. Fix the supply chain before deployment, or inherit whatever architecture gets set in place.
-          </p>
-          <p>
-            We have never before been able to create perfect physical substitutes for ourselves. These robots will have dexterous hands, double- or triple-jointed, capable of pivoting one way or another. In the same way, our future can go one way or another. The question is not whether humanoid robots will eventually arrive. It is whether we will control the hardware that arrives among us.
-          </p>
-          <p>
-            Currently, the critical hardware that makes humanoid robots possible is overwhelmingly manufactured in China. This is striking given how restrictive the American government has been toward other Chinese-made technology. The United States has restricted Chinese surveillance equipment over trust concerns and blocked Chinese electric vehicles over unfair trade practices. How then can we trust the same supply chain to produce the physical bodies of machines that will stand among us, move with us, and possess the strength to overpower us?
-          </p>
-          <p>
-            Final assembly of some humanoids is already happening in the United States. But the decisive layer is not the final assembly line. It is the components. Will we really want hundreds of millions of high-capability humanoid robots whose most safety-critical parts were designed and built under a different set of incentives? While the answer is obviously no, our current trajectory still points in that direction.
-          </p>
-          <p>
-            There are a few concrete failure modes that matter more than movie-style espionage.
-          </p>
-          <p>
-            The first is simple dependency. When the critical components come from a single geopolitical source, continuity becomes a single point of failure. Firmware updates can be withheld. Entire fleets can be bricked during a trade dispute. Spare actuators can disappear for six months. We already saw a version of this with the Nexperia chip dispute in late 2025: Dutch temporary control of the Chinese-owned company triggered Chinese export curbs on finished chips, European wafer suspensions, and production slowdowns or plant adjustments across multiple automakers, including Honda facilities in Mexico, Japan, and China. No spy was required. Just a supplier that could not be replaced on short notice. Residual friction continued into 2026.
-          </p>
-          <p>
-            The second risk is physical agency. Unlike phones, humanoid robots can act on the world. They can move objects, operate tools, and apply force. A compromised or simply unavailable robot is not a communication device that stops working; it is a machine that can fail, stop, or behave unpredictably inside factories, warehouses, and homes.
-          </p>
-          <p>
-            Phones manufactured in China largely work for us because of engineering, not geography. Hardware roots of trust, verified boot, and a signed firmware chain give operators confidence even when the physical device is assembled abroad. That same class of controls is the practical requirement for humanoid robots. Without it, location of final assembly does not solve the problem. With it, the most dangerous forms of remote control and silent failure become much harder.
-          </p>
-          <p>
-            This is the missing mechanism in the safer architectures: not merely “made in America,” but firmware and critical components that can be independently verified and updated under American control.
-          </p>
-          <p>
-            Given these risks, it is reasonable to expect American startups to treat the humanoid supply chain as a first-order problem. Several companies already perform final assembly in the United States: Agility in Salem, Oregon (with a new Physical AI hub in Fremont), Figure at its BotQ facility in San Jose, Apptronik with Jabil from its Austin base, 1X in Hayward, Boston Dynamics in the Waltham area (with high-volume plans later in Georgia via Hyundai), and Tesla converting space in Fremont. That is real progress.
-          </p>
-          <p>
-            It is also not enough. What almost none of them fully control is the layer underneath: actuators, harmonic and cycloidal gearboxes, rare-earth magnets, planetary roller screws, and force/torque sensors. A humanoid assembled in Texas or California with Chinese actuators and Chinese magnets is not a U.S. supply chain. Final assembly is visible and relatively easy to relocate. The critical mechatronic components are not.
-          </p>
-          <p>
-            Most American teams still treat hardware as largely solved and focus on the high-level software “brain.” The common assumption is that American-written control software is sufficient for safety even if the underlying actuators and firmware come from abroad. That assumption is wrong.
-          </p>
-          <p>
-            Firmware is exactly the layer that can harm the operator. Torque limits, current limits, thermal cutoffs, and safety-rated stop behavior all live in firmware, below the policy model. The high-level software requests a motion. Firmware decides whether that motion is allowed to execute. If you do not control the firmware and the actuators it commands, you do not control the safety envelope.
-          </p>
-          <p>
-            The reasons for the current structure are practical: humanoid hardware is still maturing, domestic sources for high-performance actuators and precision gearboxes remain scarce and expensive relative to Chinese alternatives, and Chinese suppliers can ship both components and complete platforms quickly. Convenience and speed are real. They do not change the fact that the decisive safety and continuity risks sit at the component and firmware layer, not at final assembly.
-          </p>
-          <p>
-            The useful way to think about this is not a simple software-versus-hardware matrix. Hardware is not one layer. A humanoid stack looks roughly like this, from top to bottom:
-          </p>
-          <ol>
-            <li>Policy and application software (the high-level “brain”)</li>
-            <li>Middleware and motion planning</li>
-            <li>Firmware and motor control</li>
-            <li>Actuators and drivetrain (motors, gearboxes, sensors)</li>
-            <li>Raw materials (rare-earth magnets, specialty steels, etc.)</li>
-          </ol>
-          <p>
-            Each layer has a different substitution cost and a different timeline. Firmware and motor-control software can be rewritten or re-verified in months by a competent engineering team. Building a domestic industry for high-performance harmonic or cycloidal gearboxes, high-torque-density BLDC motors, and the rare-earth magnets inside them is a multi-year capital project. China currently processes the overwhelming majority of the relevant rare earths (roughly 85–91% of REO processing and ~90–94% of permanent magnets). That is the harder, slower problem.
-          </p>
-          <p>
-            For humanoids specifically, the binding constraint is not advanced logic chips. It is actuation. The safety envelope lives in the firmware that sits directly on top of those actuators. Control that layer and you gain the highest safety leverage at the lowest near-term cost. That is why the practical first move is not “onshore everything.” It is to treat firmware and motor control as a non-negotiable U.S.-controlled requirement, while longer-cycle work begins on the physical drivetrain and materials.
-          </p>
-          <p>
-            A fully domestic stack remains the highest-assurance end state. Tesla is the company furthest along that path, drawing on its experience vertically integrating electric-vehicle production. Achieving it at scale will still require either sustained private capital or the kind of industrial policy the United States already applies to defense supply chains. Until the robots themselves can help manufacture the next generation of robots, this route will remain the most expensive.
-          </p>
-          <p>
-            The sequenced version of the same goal is more realistic in the near term: lock down the firmware and motor-control layer now, then progressively onshore the actuators and critical materials behind it.
-          </p>
-
-          <h4>The Roads Ahead</h4>
-          <p>
-            Four broad outcomes are possible.
-          </p>
-          <p>
-            <strong>First, a fully domestic stack.</strong> Highest assurance, highest near-term cost.
-          </p>
-          <p>
-            <strong>Second, humanoid robots with the entire stack created outside the United States.</strong> This outcome would mean effectively no U.S. control over either foreign influence or the low-level safety behavior of the machines. At a meaningful scale, there is very little chance the U.S. government would permit widespread deployment of such systems. Unitree units are already present in American research labs today; that does not change the political reality that a large fleet of fully foreign-controlled humanoids operating in factories, warehouses, and public spaces would face severe restrictions or outright prohibition. The practical result at scale would be that the United States simply does not get the robots.
-          </p>
-          <p>
-            <strong>Third, humanoid robots whose high-level software is written in the United States while the actuators, motor controllers, sensors, and the firmware that runs on them remain Chinese.</strong> This is the path most American companies are currently on. It provides limited safety control. The policy model may be American, but the layer that enforces torque limits, current limits, thermal cutoffs, and safe-stop behavior is not. Foreign influence over that layer cannot be ruled out. At today’s small volumes the government has largely tolerated these systems. Once the numbers become large, the same political pressure that restricted Chinese telecom and surveillance equipment will likely restrict these robots as well.
-          </p>
-          <p>
-            <strong>Fourth, humanoid robots whose high-level software, middleware, and the safety-critical components (actuators, motor controllers, force/torque sensors, and the firmware that runs on them) are developed and controlled in the United States.</strong> This does not require onshoring every raw material or every structural part. It does require that the layers with the highest safety leverage sit under U.S. control and can be independently verified and updated. That combination delivers the strongest practical safety posture while avoiding the full cost of a completely domestic supply chain. It is also the most realistic near-term target: firmware and motor-control software can be secured on a much shorter timeline than a full magnet or gearbox industry.
-          </p>
-          <p>
-            All of these outcomes depend on choices made now by U.S. companies and the U.S. government. Many teams have treated the hardware stack as already solved and focused exclusively on the high-level software. That approach leaves the safety envelope and the continuity of the fleet in someone else’s hands.
-          </p>
-
-          <h4>Where Trust Actually Gets Decided</h4>
-          <p>
-            The supply chain argument is right, and it stops one layer short of where trust lives.
-          </p>
-          <p>
-            “Made in America” describes where a robot was born. It says very little about what that robot is doing in month eighteen.
-          </p>
-          <p>
-            A humanoid is not a finished object the way a bridge is finished. It ships, and then it changes. Firmware arrives over the air. An actuator fails in the field and gets replaced with whatever matching module the technician has. A supplier pushes a motor-controller revision that nobody upstream reviews. A policy gets fine-tuned on new data and redeployed. The bill of materials on delivery day is not the bill of materials two years later, and the software running tonight is not the software that passed whatever review it passed.
-          </p>
-          <p>
-            So origin is necessary and not sufficient. Two questions have to be answered continuously, not once at customs.
-          </p>
-          <p>
-            The first is what is actually running on this machine right now. That question already has an answer in other industries. Phones solved it with a hardware root of trust, verified boot, and a signed firmware chain, which is why an iPhone assembled in Shenzhen still runs only what Apple signed. Robots mostly have not adopted this at the actuator level. Requiring verified boot, signed firmware, and a cryptographically attested bill of materials on any robot operating in a commercial or public space is a smaller task than rebuilding a rare-earth industry, and it can start this year. It also happens to be the layer where safety limits live: torque ceilings, current limits, thermal cutoffs, and the behavior of a safety-rated stop. Whoever controls that layer controls what the machine is physically permitted to do, regardless of who wrote the intelligence sitting above it.
-          </p>
-          <p>
-            The second question is harder and almost nobody owns it. Would you notice if the behavior changed?
-          </p>
-          <p>
-            Attestation tells you the firmware is signed. It does not tell you the robot started drawing more current on one drive motor after the last update, or that a replacement actuator has a different torque profile than the one it replaced, or that a fleet in one facility began failing a maneuver it used to complete. Those signals live in the field, in run after run of ordinary operation. On most humanoid deployments today they are not captured at industrial maturity. They surface as an operator saying the robot has been acting strange lately.
-          </p>
-          <p>
-            Industrial robots already solve this. FANUC, ABB, and KUKA systems continuously analyze joint torque and current signatures under normal cycles to detect wear and drift weeks in advance. Humanoid fleets have not yet publicly demonstrated equivalent continuous monitoring at scale. That gap turns supply-chain policy into something that cannot be audited.
-          </p>
-          <p>
-            Which is why the supply chain question and the reliability question are the same question asked at two different times. Onshoring asks whether someone can cut you off or get in. Observability asks whether you would know. A country that answers only the first has robots it cannot verify. A country that answers only the second has excellent visibility into machines it cannot source.
-          </p>
-          <p>
-            The window for answering both is open specifically because deployment has barely started. Very few humanoids are doing real work anywhere today. That is not an argument for waiting. It is the reason to move now, while the supply chain, the firmware standards, and the field practices are all still being set by whoever bothers to set them.
-          </p>
-          <p>
-            Policy is already beginning to move. In late July 2026 a National Security Determination concluded that foreign-produced advanced robotic devices pose an unacceptable risk due to supply-chain concentration in actuators, sensors, and other components, as well as cybersecurity risks from networked firmware and software. The FCC immediately added such devices to its Covered List, blocking new models from equipment authorization unless they receive Conditional Approval that requires detailed bills of materials, country-of-origin disclosures for components and firmware, and time-bound U.S. onshoring plans. The determination and the Covered List action treat the exact risks described here as national-security issues, not abstract future concerns.
-          </p>
-          <p>
-            We believe the economy will need humanoid robots at scale. The technology is too capable to be left entirely outside American control. The practical question is no longer whether robots will exist. It is whether the United States shapes the safety and dependency profile of the systems that arrive, or simply inherits whatever architecture gets locked in by default.
-          </p>
-          <p>
-            The highest-leverage step available today is to bring the safety-critical layer under verifiable U.S. control as early as possible, and to instrument the fleets so that changes in behavior remain visible. That is the difference between designing the systems we will live with and adapting to systems designed elsewhere.
-          </p>
-        </div>
-      </article>
+      <p class="section-lead">Almost nothing is deployed yet, which is why the supply-chain question matters now. The safety envelope of a humanoid lives in firmware and actuators, not on the final assembly line.</p>
+      <p class="link-row">
+        <a class="text-link" href="essay.html">Read the essay</a>
+      </p>
     </section>
-
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>© 2026 Dino Ilievski</div>
-      <div>
-        <a href="mailto:dino.ilievski@gmail.com">dino.ilievski@gmail.com</a>
-      </div>
+      <p class="footer-copy">© 2026 Dino Ilievski</p>
+      <a href="mailto:dino.ilievski@gmail.com">dino.ilievski@gmail.com</a>
     </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
