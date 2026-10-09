@@ -190,6 +190,10 @@ img, svg {
   list-style: none;
 }
 
+.nav-only-mobile {
+  display: none;
+}
+
 .nav-link {
   font-family: var(--font-sans);
   font-size: 0.9rem;
@@ -246,6 +250,29 @@ img, svg {
   width: 14px;
   height: 14px;
   fill: currentColor;
+}
+
+.meet-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--text-main);
+  color: var(--bg-main);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.meet-btn:hover {
+  background: var(--accent-terracotta);
+  color: #fff;
+}
+
+.hero-meet {
+  margin: 0 0 22px;
 }
 
 /* Mobile Nav Toggle */
@@ -907,7 +934,11 @@ img, svg {
   }
 
   .social-btn {
-    padding: 6px 10px;
+    display: none;
+  }
+
+  .nav-only-mobile {
+    display: list-item;
   }
 
   .header-socials {
