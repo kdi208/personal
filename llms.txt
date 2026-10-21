@@ -1,0 +1,19 @@
+# Dino Ilievski
+
+> Building Ancha. Princeps — in-person strategy and talent conversations for founders, with a podcast launching around live brainstorming sessions. Also advising startups on strategy and talent, investing in seed rounds, and pitch coaching. Previously: congressional fellow, corporate lawyer, med-tech founder.
+
+Contact: dino.ilievski@gmail.com
+Book time: https://calendar.app.google/ZNhWDkPHRFbm629B9
+X: https://x.com/realkdi
+LinkedIn: https://linkedin.com/in/realkdi
+
+## Princeps
+
+Live brainstorming sessions with founders on concrete decisions and longer arcs. First episode in production. Introductions or questions via the calendar link above.
+
+## Writing
+
+Full text is hosted on this site. Each piece was originally published on X; the X link is kept at the bottom of each article.
+
+- [The Next Software Industry Is Humans Writing Rules for Agents](https://www.dinoilievski.com/writing/the-next-software-industry-is-humans-writing-rules-for-agents.html) (Oct 14, 2026): Agents that write their own skills do worse than agents with none; human-written skills jump performance 16.6 points. As agents become the layer over the software stack, every layer is an incomplete contract — and unlike other layers, agents have no law, norms, or culture to fill the gaps. The new software industry is humans writing rules, harnesses, and duties for their agents.
+- [Your Agent's Duties Shouldn't Belong to Its Vendor](https://www.dinoilievski.com/writing/your-agents-duties-shouldnt-belong-to-its-vendor.html) (Oct 10, 2026): The law treats an AI agent as a tool, so liability lands on whoever deployed it — yet its duties are whatever its vendor configured. Agency law solved the principal-agent problem for humans with limits of authority, records, escalation, and liability. Those duties should be written once by the principal, enforced from outside the agent, and carried everywhere it acts.

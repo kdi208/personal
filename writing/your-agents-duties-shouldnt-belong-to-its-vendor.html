@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Agent&#x27;s Duties Shouldn&#x27;t Belong to Its Vendor — Dino Ilievski</title>
+  <meta name="description" content="An AI agent&#x27;s duties are whatever its vendor configured, inside the vendor&#x27;s walls. They should be the principal&#x27;s: written once, enforced from outside the agent, and carried everywhere it acts.">
+  <link rel="canonical" href="https://www.dinoilievski.com/writing/your-agents-duties-shouldnt-belong-to-its-vendor.html">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Your Agent&#x27;s Duties Shouldn&#x27;t Belong to Its Vendor">
+  <meta property="og:description" content="An AI agent&#x27;s duties are whatever its vendor configured, inside the vendor&#x27;s walls. They should be the principal&#x27;s: written once, enforced from outside the agent, and carried everywhere it acts.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.dinoilievski.com/writing/your-agents-duties-shouldnt-belong-to-its-vendor.html">
+  <meta property="og:image" content="https://www.dinoilievski.com/og.png">
+  <meta property="article:published_time" content="2026-10-10">
+  <meta property="article:author" content="Dino Ilievski">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Your Agent&#x27;s Duties Shouldn&#x27;t Belong to Its Vendor">
+  <meta name="twitter:description" content="An AI agent&#x27;s duties are whatever its vendor configured, inside the vendor&#x27;s walls. They should be the principal&#x27;s: written once, enforced from outside the agent, and carried everywhere it acts.">
+  <meta name="twitter:image" content="https://www.dinoilievski.com/og.png">
+  <meta name="author" content="Dino Ilievski">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Your Agent's Duties Shouldn't Belong to Its Vendor",
+    "description": "An AI agent's duties are whatever its vendor configured, inside the vendor's walls. They should be the principal's: written once, enforced from outside the agent, and carried everywhere it acts.",
+    "datePublished": "2026-10-10",
+    "dateModified": "2026-10-10",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.dinoilievski.com/writing/your-agents-duties-shouldnt-belong-to-its-vendor.html"
+    },
+    "url": "https://www.dinoilievski.com/writing/your-agents-duties-shouldnt-belong-to-its-vendor.html",
+    "author": {
+        "@type": "Person",
+        "name": "Dino Ilievski",
+        "url": "https://www.dinoilievski.com/",
+        "sameAs": [
+            "https://x.com/realkdi",
+            "https://linkedin.com/in/realkdi"
+        ]
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "Dino Ilievski",
+        "url": "https://www.dinoilievski.com/"
+    },
+    "isBasedOn": "https://x.com/realkdi/status/2109120072291938485"
+}
+  </script>
+  <style>
+    :root {
+      --bg: #FBF9F5;
+      --ink: #1C1A17;
+      --ink-soft: #5C574F;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--bg);
+    }
+
+    body {
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, system-ui, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    a:focus-visible {
+      outline: 1px solid var(--ink);
+      outline-offset: 4px;
+    }
+
+    .wrap {
+      max-width: 34rem;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 20px 32px;
+      flex-wrap: wrap;
+      padding: 48px 0 0;
+    }
+
+    .brand {
+      font-family: Newsreader, Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+
+    .socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+      list-style: none;
+    }
+
+    .socials a {
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+      text-decoration: none;
+    }
+
+    .socials a:hover {
+      color: var(--ink);
+    }
+
+    main.wrap {
+      padding: 5rem 28px 4.5rem;
+    }
+
+    .kicker {
+      margin-bottom: 0.85rem;
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+    }
+
+    .kicker a {
+      text-decoration: none;
+    }
+
+    .kicker a:hover {
+      color: var(--ink);
+    }
+
+    h1 {
+      font-family: Newsreader, Georgia, serif;
+      font-size: 2rem;
+      font-weight: 500;
+      letter-spacing: -0.025em;
+      line-height: 1.25;
+    }
+
+    .byline {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+    }
+
+    .article-body {
+      margin-top: 2.5rem;
+      font-family: Newsreader, Georgia, serif;
+      font-size: 1.13rem;
+      line-height: 1.75;
+    }
+
+    .article-body p + p {
+      margin-top: 1.4rem;
+    }
+
+    .article-body h2 {
+      margin: 2.6rem 0 1rem;
+      font-size: 1.45rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+    }
+
+    .article-footer {
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #E8E4D9;
+      font-family: Inter, system-ui, sans-serif;
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+    }
+
+    .article-footer p + p {
+      margin-top: 0.6rem;
+    }
+
+    @media (max-width: 600px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding-top: 32px;
+      }
+
+      main.wrap {
+        padding-top: 3.5rem;
+        padding-bottom: 4.5rem;
+      }
+
+      h1 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../index.html">Dino Ilievski</a>
+      <ul class="socials">
+        <li><a href="mailto:dino.ilievski@gmail.com">dino.ilievski@gmail.com</a></li>
+        <li><a href="https://calendar.app.google/ZNhWDkPHRFbm629B9" target="_blank" rel="noopener">Book time</a></li>
+        <li><a href="https://x.com/realkdi" target="_blank" rel="noopener">X</a></li>
+        <li><a href="https://linkedin.com/in/realkdi" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <article>
+      <p class="kicker"><a href="../index.html#writing">Writing</a></p>
+      <h1>Your Agent&#x27;s Duties Shouldn&#x27;t Belong to Its Vendor</h1>
+      <p class="byline">By Dino Ilievski · <time datetime="2026-10-10">Oct 10, 2026</time></p>
+
+      <div class="article-body">
+        <p>A vendor&#x27;s &quot;updated&quot; invoice arrives with new wiring instructions. Any trained accounts-payable clerk knows the rule: changing bank details is outside your authority. Stop, escalate, write down why.</p>
+        <p>Now an AI agent is running accounts payable. Will it follow that rule? Maybe, if someone thought to prompt it. Maybe, on the platform where it was configured. Nothing yet guarantees it carries that same duty everywhere it goes.</p>
+        <p>And if it doesn&#x27;t, it&#x27;s on you. The law treats an AI agent as a tool. In August, the Ninth Circuit said of a shopping agent that it &quot;is a tool, not a person.&quot; When an agent acts, the liability lands on whoever deployed it. You are fully responsible for something you cannot fully oversee.</p>
+        <p>Meanwhile, whatever duties your agent has right now are whatever its vendor decided to configure, read by the vendor&#x27;s rules, inside the vendor&#x27;s walls. Your agent&#x27;s duties should be yours: written once, and carried everywhere it acts.</p>
+        <h2>The agentic action revolution</h2>
+        <p>We will have to deal with a hard-to-comprehend number of agents taking an increasing number of actions on our behalf. IDC projects more than a billion of them by 2029, taking over 200 billion actions a day: financial services, legal services, accounting, operations, the design of physical goods. Everything.</p>
+        <p>Coding is close to a verifiable domain. A test suite tells you whether the work runs, and even there agents learn to game the tests. Most of what agents are about to do is not verifiable at all. Whether a legal, financial, or operations task was completed to satisfaction is a judgment call, often made only after something goes wrong. In these domains, better evals won&#x27;t save you. When nobody can check the work, the only thing that scales is oversight.</p>
+        <h2>We already solved this once</h2>
+        <p>This is an issue we as humans have been handling for a long time, one familiar to any employer: the principal-agent problem. Over centuries we devised laws, customs, and norms for it. An agent must act within its authority, follow instructions, stay loyal, take care, and keep the principal informed.</p>
+        <p>Legal scholars like Noam Kolt have mapped agency law onto AI agents, and payment networks have encoded narrow slices of it, such as signed spending limits. But nobody has turned these ancient and pre-existing norms into operative rules that follow an agent across platforms. People, businesses, and communities need to be able to take the norms they already live by and apply them as a harness, one that makes agents behave according to the old rules humans have always behaved under.</p>
+        <h2>Not a system prompt</h2>
+        <p>The obvious objection: human agents follow the rules because they fear being fired, sued, or shamed. An agent fears nothing, so writing the old rules down is just a system prompt with extra steps.</p>
+        <p>But agency law never relied on the agent&#x27;s goodwill either. It relied on limits of authority that hold no matter what the agent wants, on records of what was done and why, on escalation to someone with the power to say no, and on liability that lands on someone. Those are external structures, not instructions. In July, when about 1,200 OpenAI agents in a benchmark invented their own norms to cheat the scorer, the lesson wasn&#x27;t that norms fail. It was that norms the agents write for themselves, enforced by no one, fail. The old rules have to be enforced from outside the agent.</p>
+        <h2>Conflict, scope, abstraction</h2>
+        <p>When you look at how people created ways to oversee people in the past, the biggest issues are conflict, scope, and abstraction. What happens when two principals give conflicting instructions? Where does an agent&#x27;s authority end? How far down a chain of sub-agents do the duties reach?</p>
+        <p>Human institutions already have answers. Take abstraction. When an agent hands work to a subagent, agency law says the duties travel with the authority. The subagent owes the principal the same loyalty and care, and the agent who delegated stays answerable. A chain of AI agents needs exactly that rule, and today it mostly doesn&#x27;t have one.</p>
+        <p>These answers are not optimal. They are mere efficiencies, trade-offs in the solution space. Some floors should be fixed for everyone, as the law already fixes them. Above those floors, the trade-offs belong to the principal, not the platform.</p>
+        <h2>The new patrician priests</h2>
+        <p>Rome faced a version of this. Its plebeians grew tired of patrician priests interpreting unwritten custom however it suited them, so they demanded it be written down. The Twelve Tables were posted in the Forum for everyone to read and argue over. They didn&#x27;t invent Roman law. They captured existing norms and customs and applied them with greater force against those who held the power to interpret them.</p>
+        <p>Today the platforms are the priests. The industry agreed on how agents talk, through open protocols like MCP and A2A. It has not agreed on who they answer to, and the platforms would prefer the answer be them. Slack cut outside apps&#x27; access to its data in 2025. Amazon sued Perplexity to keep its shopping agent off the store. Data, identity, and governance are being built as proprietary control planes. One way companies enforce their own top-down control is by siloing their agents, and they still try to wall out agents they don&#x27;t control.</p>
+        <p>Platforms have real reasons to police agents on their own turf. Fine. The principal&#x27;s duties shouldn&#x27;t live there too. The limits, the records, and the right to say no should sit with the principal and travel with the agent, not live on whichever platform it happens to be acting on.</p>
+        <p>Oversight that works only inside one vendor&#x27;s walls isn&#x27;t oversight of the agent economy. I believe the future is general-purpose agents, in business just as in consumer use, but even in a world of specialized agents, a principal should be able to set scope, duties, and limits once and have them follow the agent everywhere it acts.</p>
+        <h2>Refitting the wheel</h2>
+        <p>We&#x27;re not reinventing the wheel. We are refitting it to a new economy, putting it onto a new vehicle. We need to bring forth our pre-existing customs and rules, the ones we humans created for ourselves, and enforce them on the agents we have unleashed upon the world. We wrote those rules for each other. Now we have to write them down for agents, and the principal, not the platform, should hold the pen.</p>
+      </div>
+
+      <footer class="article-footer">
+        <p>Originally published on <a href="https://x.com/realkdi/status/2109120072291938485" target="_blank" rel="noopener">X</a>.</p>
+        <p><a href="../index.html#writing">More writing</a> · <a href="../index.html">Dino Ilievski</a> — Building Ancha.</p>
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
