@@ -1,0 +1,53 @@
+name: Publish article
+
+# Trigger from the Actions tab (or `gh workflow run publish-article.yml -f status_url=...`).
+# Fetches the X article, generates its page, updates index/sitemap/llms.txt,
+# commits, and pushes — Vercel then deploys automatically.
+
+on:
+  workflow_dispatch:
+    inputs:
+      status_url:
+        description: "X article post URL, e.g. https://x.com/realkdi/status/123…"
+        required: true
+        type: string
+      index_desc:
+        description: "Optional one-liner shown under the title on the homepage"
+        required: false
+        type: string
+      promote:
+        description: "Optional: plain paragraph text to render as a section heading"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Publish article
+        run: |
+          ARGS=()
+          if [ -n "${{ inputs.index_desc }}" ]; then ARGS+=(--index-desc "${{ inputs.index_desc }}"); fi
+          if [ -n "${{ inputs.promote }}" ]; then ARGS+=(--promote "${{ inputs.promote }}"); fi
+          python3 scripts/publish_article.py "${{ inputs.status_url }}" "${ARGS[@]}"
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html sitemap.xml llms.txt writing/
+          if git diff --cached --quiet; then
+            echo "Nothing changed (already published?)."
+          else
+            git commit -m "Publish article from X"
+            git push
+          fi
