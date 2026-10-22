@@ -1,5 +1,12 @@
 {
   "buildCommand": null,
   "outputDirectory": ".",
-  "framework": null
+  "framework": null,
+  "redirects": [
+    {
+      "source": "/writing/there-will-be-no-grain-dole.html",
+      "destination": "/writing/the-princeps-thesis.html",
+      "permanent": true
+    }
+  ]
 }
