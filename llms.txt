@@ -1,21 +1,21 @@
 # Dino Ilievski
 
-> Building Ancha. Princeps — in-person strategy, narrative, and talent work with founders. Previously: congressional fellow, corporate lawyer, med-tech founder.
+> Advisor and investor to frontier founders. Princeps is his practice and podcast: in-person work with a small number of founders building robotics, AI and deep tech in San Francisco. Previously: congressional fellow, corporate lawyer, med-tech founder.
 
 Contact: dino.ilievski@gmail.com
-Book time: https://calendar.app.google/ZNhWDkPHRFbm629B9
+Book a conversation: https://calendar.app.google/ZNhWDkPHRFbm629B9
 X: https://x.com/realkdi
 LinkedIn: https://linkedin.com/in/realkdi
 
 ## Princeps
 
-In-person strategy, narrative, and talent work with founders. Live brainstorming sessions. Podcast launching. Includes advising and pitch coaching.
-
+Princeps is Dino's practice and podcast. The word is Latin for "the first": the one who goes ahead and shows the way. He works with a small number of founders, in person, in San Francisco — one company per market. Engagements run twelve months. Clients appear in the Princeps portfolio and join as guests on the podcast.
 
 ## Writing
 
-Full text is hosted on this site. Each piece was originally published on X; the X link is kept at the bottom of each article.
+Full text is hosted on this site.
 
+- [There Will Be No Grain Dole](https://www.dinoilievski.com/writing/there-will-be-no-grain-dole.html) (Oct 21, 2026): The Struggle for the Singularity. There will be no grain dole — no UBI to carry everyone through. Princeps-ism: society is run by those who go first. The magnitude is the size of your work; the direction is Omega.
 - [The Robotics Issue Nobody Is Talking About](https://www.dinoilievski.com/writing/the-robotics-issue-nobody-is-talking-about.html) (Oct 18, 2026): Almost nothing is deployed yet, so the humanoid supply chain can still be fixed before it locks in. The safety envelope of a humanoid lives in its firmware and actuators, not in final assembly — and trust has to be answered continuously after deployment: what is actually running on the machine, and would you notice if its behavior changed?
 - [The Next Software Industry Is Humans Writing Rules for Agents](https://www.dinoilievski.com/writing/the-next-software-industry-is-humans-writing-rules-for-agents.html) (Oct 14, 2026): Agents that write their own skills do worse than agents with none; human-written skills jump performance 16.6 points. As agents become the layer over the software stack, every layer is an incomplete contract — and unlike other layers, agents have no law, norms, or culture to fill the gaps. The new software industry is humans writing rules, harnesses, and duties for their agents.
 - [Your Agent's Duties Shouldn't Belong to Its Vendor](https://www.dinoilievski.com/writing/your-agents-duties-shouldnt-belong-to-its-vendor.html) (Oct 10, 2026): The law treats an AI agent as a tool, so liability lands on whoever deployed it — yet its duties are whatever its vendor configured. Agency law solved the principal-agent problem for humans with limits of authority, records, escalation, and liability. Those duties should be written once by the principal, enforced from outside the agent, and carried everywhere it acts.
