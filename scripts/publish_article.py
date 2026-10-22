@@ -231,7 +231,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
       <a class="brand" href="../index.html">Dino Ilievski</a>
       <ul class="socials">
         <li><a href="mailto:dino.ilievski@gmail.com">dino.ilievski@gmail.com</a></li>
-        <li><a href="https://calendar.app.google/ZNhWDkPHRFbm629B9" target="_blank" rel="noopener">Book time</a></li>
+        <li><a href="https://calendar.app.google/ZNhWDkPHRFbm629B9" target="_blank" rel="noopener">Book a conversation</a></li>
         <li><a href="https://x.com/realkdi" target="_blank" rel="noopener">X</a></li>
         <li><a href="https://linkedin.com/in/realkdi" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
@@ -250,7 +250,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 
       <footer class="article-footer">
         <p>Originally published on <a href="%%X_URL%%" target="_blank" rel="noopener">X</a>.</p>
-        <p><a href="../index.html#writing">More writing</a> · <a href="../index.html">Dino Ilievski</a> — Building Ancha.</p>
+        <p><a href="../index.html#writing">More writing</a> · <a href="../index.html">Dino Ilievski</a></p>
       </footer>
     </article>
   </main>
