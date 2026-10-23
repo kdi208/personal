@@ -49,6 +49,9 @@
 
     html {
       background: var(--bg);
+      overflow-x: clip;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
     }
 
     body {
@@ -58,7 +61,10 @@
       font-family: Inter, system-ui, sans-serif;
       font-size: 17px;
       line-height: 1.65;
+      overflow-wrap: break-word;
       -webkit-font-smoothing: antialiased;
+      padding-left: env(safe-area-inset-left);
+      padding-right: env(safe-area-inset-right);
     }
 
     a {
@@ -75,7 +81,7 @@
     .wrap {
       max-width: 34rem;
       margin: 0 auto;
-      padding: 0 28px;
+      padding-inline: clamp(1.5rem, 6.5vw, 1.75rem);
     }
 
     .header-inner {
@@ -84,7 +90,7 @@
       justify-content: space-between;
       gap: 20px 32px;
       flex-wrap: wrap;
-      padding: 48px 0 0;
+      padding-top: 48px;
     }
 
     .brand {
@@ -103,9 +109,16 @@
     }
 
     .socials a {
+      display: inline-block;
       font-size: 0.9rem;
       color: var(--ink-soft);
       text-decoration: none;
+      padding-block: 0.4rem;
+      line-height: 1.3;
+    }
+
+    .email-short {
+      display: none;
     }
 
     .socials a:hover {
@@ -113,7 +126,8 @@
     }
 
     main.wrap {
-      padding: 7.5rem 28px 4.5rem;
+      padding-top: 7.5rem;
+      padding-bottom: 4.5rem;
     }
 
     h1 {
@@ -223,25 +237,64 @@
       color: var(--ink-soft);
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 720px) {
       .header-inner {
         flex-direction: column;
         align-items: flex-start;
-        gap: 16px;
-        padding-top: 32px;
+        gap: 10px;
+        padding-top: max(1.5rem, env(safe-area-inset-top));
+      }
+
+      .brand {
+        font-size: 1.25rem;
+      }
+
+      .socials {
+        width: 100%;
+        gap: 0.15rem 1.25rem;
+      }
+
+      .socials a {
+        padding-block: 0.55rem;
+      }
+
+      .email-full {
+        display: none;
+      }
+
+      .email-short {
+        display: inline;
       }
 
       main.wrap {
-        padding-top: 5rem;
-        padding-bottom: 4.5rem;
+        padding-top: 4.25rem;
+        padding-bottom: max(4rem, calc(2.5rem + env(safe-area-inset-bottom)));
       }
 
       h1 {
-        font-size: 1.7rem;
+        font-size: clamp(1.45rem, 6.5vw, 1.7rem);
+      }
+
+      .lead {
+        font-size: 1rem;
+      }
+
+      .ctas {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.15rem;
+      }
+
+      .ctas a {
+        padding-block: 0.45rem;
+      }
+
+      .article-title {
+        font-size: 1.1rem;
       }
 
       section {
-        margin-top: 4.25rem;
+        margin-top: 3.75rem;
       }
     }
   </style>
@@ -251,7 +304,7 @@
     <div class="wrap header-inner">
       <a class="brand" href="#top">Dino Ilievski</a>
       <ul class="socials">
-        <li><a href="mailto:dino.ilievski@gmail.com">dino.ilievski@gmail.com</a></li>
+        <li><a href="mailto:dino.ilievski@gmail.com"><span class="email-full">dino.ilievski@gmail.com</span><span class="email-short">Email</span></a></li>
         <li><a href="https://calendar.app.google/ZNhWDkPHRFbm629B9" target="_blank" rel="noopener">Book a conversation</a></li>
         <li><a href="https://x.com/realkdi" target="_blank" rel="noopener">X</a></li>
         <li><a href="https://linkedin.com/in/realkdi" target="_blank" rel="noopener">LinkedIn</a></li>
