@@ -14,6 +14,7 @@ Princeps is how Dino backs frontier founders: advising, investing, and a podcast
 ## Projects
 
 - [Age of Agents](https://kdi208.github.io/Age-of-Agents/) ([source](https://github.com/kdi208/Age-of-Agents)): An Age of Empires–style control panel for a fleet of AI agents. Each agent is a unit on a map of your codebase.
+- [Routine Lab](https://kdi208.github.io/Routine-lab/) ([source](https://github.com/kdi208/Routine-lab)): Edit a training routine, log body measurements, and see what each change is predicted to do to each tape site.
 
 ## Writing
 
