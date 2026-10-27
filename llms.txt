@@ -11,6 +11,10 @@ LinkedIn: https://linkedin.com/in/realkdi
 
 Princeps is how Dino backs frontier founders: advising, investing, and a podcast about the future they're building. The word is Latin for "the first": the one who goes ahead and shows the way. He works with a small number of founders, in person, in San Francisco — one company per market. Engagements run twelve months. Clients appear in the Princeps portfolio.
 
+## Projects
+
+- [Age of Agents](https://kdi208.github.io/Age-of-Agents/) ([source](https://github.com/kdi208/Age-of-Agents)): An Age of Empires–style control panel for a fleet of AI agents. Each agent is a unit on a map of your codebase.
+
 ## Writing
 
 Full text is hosted on this site.
