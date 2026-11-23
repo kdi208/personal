@@ -282,7 +282,6 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
         <li><a href="mailto:dino.ilievski@gmail.com"><span class="email-full">dino.ilievski@gmail.com</span><span class="email-short">Email</span></a></li>
         <li><a href="../index.html#show">The show</a></li>
         <li><a href="https://x.com/realkdi" target="_blank" rel="noopener">X</a></li>
-        <li><a href="https://linkedin.com/in/realkdi" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
     </div>
   </header>
@@ -411,7 +410,7 @@ def main() -> int:
             "@type": "Person",
             "name": "Dino Ilievski",
             "url": f"{SITE}/",
-            "sameAs": ["https://x.com/realkdi", "https://linkedin.com/in/realkdi"],
+            "sameAs": ["https://x.com/realkdi"],
         },
         "publisher": {"@type": "Person", "name": "Dino Ilievski", "url": f"{SITE}/"},
         "isBasedOn": x_url,
