@@ -3,31 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dino Ilievski</title>
-  <meta name="description" content="Advisor and investor to frontier founders. Princeps — in-person work with founders building robotics, AI and deep tech.">
+  <title>Princeps · Dino Ilievski</title>
+  <meta name="description" content="Princeps is a show where Dino Ilievski asks founders and the people building technology one question: how is this meaningful to humans?">
   <meta name="author" content="Dino Ilievski">
   <link rel="canonical" href="https://www.dinoilievski.com/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <meta property="og:title" content="Dino Ilievski">
-  <meta property="og:description" content="Advisor and investor to frontier founders. Princeps — in-person work with founders building robotics, AI and deep tech.">
+  <meta property="og:title" content="Princeps · Dino Ilievski">
+  <meta property="og:description" content="Princeps is a show where Dino Ilievski asks founders and the people building technology one question: how is this meaningful to humans?">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.dinoilievski.com/">
   <meta property="og:image" content="https://www.dinoilievski.com/og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Dino Ilievski">
-  <meta name="twitter:description" content="Advisor and investor to frontier founders. Princeps — in-person work with founders building robotics, AI and deep tech.">
+  <meta name="twitter:title" content="Princeps · Dino Ilievski">
+  <meta name="twitter:description" content="Princeps is a show where Dino Ilievski asks founders and the people building technology one question: how is this meaningful to humans?">
   <meta name="twitter:image" content="https://www.dinoilievski.com/og.png">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Dino Ilievski",
-    "url": "https://www.dinoilievski.com/",
-    "email": "mailto:dino.ilievski@gmail.com",
-    "jobTitle": "Advisor and investor",
-    "sameAs": [
-      "https://x.com/realkdi",
-      "https://linkedin.com/in/realkdi"
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://www.dinoilievski.com/#dino",
+        "name": "Dino Ilievski",
+        "url": "https://www.dinoilievski.com/",
+        "email": "mailto:dino.ilievski@gmail.com",
+        "jobTitle": "Host of Princeps",
+        "sameAs": [
+          "https://x.com/realkdi",
+          "https://linkedin.com/in/realkdi"
+        ]
+      },
+      {
+        "@type": "CreativeWorkSeries",
+        "name": "Princeps",
+        "description": "Princeps is a show where Dino Ilievski asks founders and the people building technology one question: how is this meaningful to humans?",
+        "url": "https://www.dinoilievski.com/#show",
+        "author": { "@id": "https://www.dinoilievski.com/#dino" }
+      }
     ]
   }
   </script>
@@ -48,6 +60,7 @@
     }
 
     html {
+      scroll-behavior: smooth;
       background: var(--bg);
       overflow-x: clip;
       -webkit-text-size-adjust: 100%;
@@ -230,6 +243,34 @@
       line-height: 1.35;
     }
 
+    .channels {
+      list-style: none;
+    }
+
+    .channels li + li {
+      margin-top: 0.7rem;
+    }
+
+    .channels .soon {
+      color: var(--ink-soft);
+    }
+
+    .channel-name {
+      font-weight: 500;
+    }
+
+    .channel-what {
+      color: var(--ink-soft);
+    }
+
+    .pull {
+      font-family: Newsreader, Georgia, serif;
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.4;
+    }
+
     time {
       display: block;
       margin-top: 0.35rem;
@@ -304,8 +345,8 @@
     <div class="wrap header-inner">
       <a class="brand" href="#top">Dino Ilievski</a>
       <ul class="socials">
-        <li><a href="mailto:dino.ilievski@gmail.com"><span class="email-full">dino.ilievski@gmail.com</span><span class="email-short">Email</span></a></li>
-        <li><a href="https://calendar.app.google/ZNhWDkPHRFbm629B9" target="_blank" rel="noopener">Book a conversation</a></li>
+        <li><a href="#watch">Watch</a></li>
+        <li><a href="#guests">Come on the show</a></li>
         <li><a href="https://x.com/realkdi" target="_blank" rel="noopener">X</a></li>
         <li><a href="https://linkedin.com/in/realkdi" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
@@ -313,98 +354,70 @@
   </header>
 
   <main class="wrap" id="top">
-    <h1>Advisor and investor to frontier founders.</h1>
-    <p class="lead">I help founders building robotics, AI and deep tech find the story of the future they're making, and tell it so the right investors, hires and customers follow.</p>
+    <h1>How is this meaningful to humans?</h1>
+    <p class="lead">I ask founders and the people building technology one question. Princeps is the show where they answer it.</p>
     <ul class="ctas">
-      <li><a href="https://calendar.app.google/ZNhWDkPHRFbm629B9" target="_blank" rel="noopener">Book a conversation</a></li>
-      <li><a href="writing/the-princeps-thesis.html">Read the manifesto</a></li>
+      <li><a href="#watch">Watch the show</a></li>
+      <li><a href="#guests">Come on the show</a></li>
+      <li><a href="writing/no-grain-doles.html">Read the manifesto</a></li>
     </ul>
 
-    <section id="princeps">
-      <h2>Princeps</h2>
-      <div class="prose">
-        <p>Princeps is how I back frontier founders: advising, investing, and a podcast about the future they're building. The word is Latin for "the first": the one who goes ahead and shows the way.</p>
-        <p>I work with a small number of founders, in person, in San Francisco. I take one company per market, so I never advise your competitor.</p>
-      </div>
-    </section>
-
-    <section id="what-we-work-on">
-      <h2>What we work on</h2>
-      <ul class="work-list">
-        <li><strong>Vision and story.</strong> We find the future you're building and put it into words you'll use for years: in the pitch, in hiring, on stage.</li>
-        <li><strong>Pitch feedback.</strong> A sharp, honest read before the rooms that matter.</li>
-        <li><strong>Your slot is yours.</strong> One company per market. No conflicts.</li>
-        <li><strong>The right people.</strong> Introductions to hires and specialists I trust.</li>
-        <li><strong>The right investors.</strong> Introductions to investors who fit what you're building.</li>
-      </ul>
-      <div class="prose work-closing">
-        <p>Engagements run twelve months, with set hours each month, always in person. Clients appear in the Princeps portfolio.</p>
-      </div>
-    </section>
-
-    <section id="who-its-for">
-      <h2>Who it's for</h2>
-      <div class="prose">
-        <p>Founders in the Bay Area building frontier technology, who have raised and are getting ready for what comes next.</p>
-      </div>
-    </section>
-
-    <section id="podcast">
-      <h2>The podcast</h2>
+    <section id="show">
+      <h2>The show</h2>
       <p class="podcast-title">Princeps</p>
       <div class="prose">
-        <p>Founders on the future they see, not the quarter they're in.</p>
-        <p>Episode 0 and the first conversations arrive November 11.</p>
+        <p>Long conversations with the people building what comes next. Not the roadmap, not the round. What it means for the people who will live with it.</p>
+        <p>Every founder has a pitch for investors. Few have an answer for their grandmother. That answer is what I'm after.</p>
+        <p>A new long episode every Tuesday, with shorts and essays through the week. The first episode, <em>No Grain Doles</em>, airs Tuesday, December 1.</p>
       </div>
     </section>
 
-    <section id="what-i-believe">
+    <section id="watch">
+      <h2>Watch and listen</h2>
+      <ul class="channels">
+        <!-- TODO before launch: replace each "soon" item with a link once the channel URL is final. -->
+        <li class="soon"><span class="channel-name">YouTube</span> <span class="channel-what">· full episodes and shorts · from Dec 1</span></li>
+        <li class="soon"><span class="channel-name">Podcast apps</span> <span class="channel-what">· audio episodes · from Dec 1</span></li>
+        <li class="soon"><span class="channel-name">TikTok</span> <span class="channel-what">· shorts · from Dec 1</span></li>
+        <li><a class="channel-name" href="https://x.com/realkdi" target="_blank" rel="noopener">X</a> <span class="channel-what">· essays and articles</span></li>
+      </ul>
+    </section>
+
+    <section id="manifesto">
       <h2>What I believe</h2>
       <div class="prose">
-        <p>I want the struggle to continue. AI should lift people up, not do their thinking for them. The founders who shape what comes next will be the ones who still think for themselves.</p>
-        <p><a href="writing/the-princeps-thesis.html">Read the manifesto: The Princeps Thesis</a></p>
+        <p class="pull">Rome kept a million people quiet with bread and circuses. We are building the new bread and circuses in our own labs.</p>
+        <p>Feeds that choose for us, assistants that think for us, and a future where AI does the work and a monthly check covers the rest. I refuse it. A safety net is fine. A hammock is not.</p>
+        <p>Not all struggle is sacred. Disease, hunger and needless suffering ennoble no one, and technology should end them without apology. But the struggle to learn, to build, to choose, to master something hard is what makes us who we are. Erase the first and you free people. Erase the second and you empty them.</p>
+        <p>Good AI pushes us into harder struggles. Bad AI takes ours away.</p>
+        <p><a href="writing/no-grain-doles.html">Read the manifesto: <em>No Grain Doles</em></a></p>
+      </div>
+    </section>
+
+    <section id="guests">
+      <h2>Come on the show</h2>
+      <div class="prose">
+        <p>If you build technology and you've thought hard about what it means for people, I want to talk to you. You don't need to be famous. I'm looking for the most thoughtful founder, not the most famous one.</p>
+        <p>The conversation runs 60 to 90 minutes, filmed, in person or remote. You get three or four questions ahead of time and nothing else to prepare.</p>
+        <p><a href="mailto:dino.ilievski@gmail.com?subject=Princeps%20guest">Write to me</a>. Know someone who belongs on the show? <a href="mailto:dino.ilievski@gmail.com?subject=Princeps%20guest%20suggestion">Tell me who</a>.</p>
       </div>
     </section>
 
     <section id="about">
       <h2>About</h2>
       <div class="prose">
-        <p>Before Princeps, I was a Congressional fellow working on tax policy, a corporate lawyer, and the founder of a medical Q&amp;A software company. I've invested in startups and now advise frontier founders in San Francisco.</p>
+        <p>I'm Dino Ilievski. I've spent my career where technology meets the people who live with it: as a Congressional fellow working on tax policy, as a corporate lawyer, and as the founder of a medical Q&amp;A software company. I've invested in startups. Princeps is the question I kept asking in all of those rooms.</p>
       </div>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul class="articles">
-        <li>
-          <a href="https://kdi208.github.io/Age-of-Agents/" target="_blank" rel="noopener">
-            <span class="article-title">Age of Agents</span>
-            <span class="article-desc">An Age of Empires–style control panel for a fleet of AI agents. Each agent is a unit on a map of your codebase.</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://kdi208.github.io/Routine-lab/" target="_blank" rel="noopener">
-            <span class="article-title">Routine Lab</span>
-            <span class="article-desc">Edit a training routine, log body measurements, and see what each change is predicted to do to each tape site.</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://umbra-jolly-acre-drift.grok.me" target="_blank" rel="noopener">
-            <span class="article-title">STILL</span>
-            <span class="article-desc">Who you can still become. You are a certain age, in a certain spot. So were they.</span>
-          </a>
-        </li>
-      </ul>
     </section>
 
     <section id="writing">
       <h2>Writing</h2>
       <ul class="articles">
         <li>
-          <a href="writing/the-princeps-thesis.html">
-            <span class="article-title">The Princeps Thesis</span>
-            <span class="article-desc">Princeps backs the founders who go first. This is what I look for in them, and why.</span>
-            <time datetime="2026-10-22">Oct 22, 2026</time>
+          <a href="writing/no-grain-doles.html">
+            <span class="article-title">No Grain Doles</span>
+            <span class="article-desc">A manifesto for humanist expansion. Technology should never take away the struggle that makes us human.</span>
+            <time datetime="2026-11-30">Nov 30, 2026</time>
           </a>
         </li>
         <li>
@@ -426,6 +439,30 @@
             <span class="article-title">Your Agent's Duties Shouldn't Belong to Its Vendor</span>
             <span class="article-desc">An agent's duties should be its principal's — written once and carried everywhere it acts, not configured by its vendor.</span>
             <time datetime="2026-10-10">Oct 10, 2026</time>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul class="articles projects">
+        <li>
+          <a href="https://kdi208.github.io/Age-of-Agents/" target="_blank" rel="noopener">
+            <span class="article-title">Age of Agents</span>
+            <span class="article-desc">An Age of Empires–style control panel for a fleet of AI agents. Each agent is a unit on a map of your codebase.</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://kdi208.github.io/Routine-lab/" target="_blank" rel="noopener">
+            <span class="article-title">Routine Lab</span>
+            <span class="article-desc">Edit a training routine, log body measurements, and see what each change is predicted to do to each tape site.</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://umbra-jolly-acre-drift.grok.me" target="_blank" rel="noopener">
+            <span class="article-title">STILL</span>
+            <span class="article-desc">Who you can still become. You are a certain age, in a certain spot. So were they.</span>
           </a>
         </li>
       </ul>
