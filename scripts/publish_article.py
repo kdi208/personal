@@ -280,7 +280,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
       <a class="brand" href="../index.html">Dino Ilievski</a>
       <ul class="socials">
         <li><a href="mailto:dino.ilievski@gmail.com"><span class="email-full">dino.ilievski@gmail.com</span><span class="email-short">Email</span></a></li>
-        <li><a href="https://calendar.app.google/ZNhWDkPHRFbm629B9" target="_blank" rel="noopener">Book a conversation</a></li>
+        <li><a href="../index.html#show">The show</a></li>
         <li><a href="https://x.com/realkdi" target="_blank" rel="noopener">X</a></li>
         <li><a href="https://linkedin.com/in/realkdi" target="_blank" rel="noopener">LinkedIn</a></li>
       </ul>
@@ -430,7 +430,7 @@ def main() -> int:
     page_path.write_text(page)
     print(f"Wrote {page_path.relative_to(ROOT)}")
 
-    # Homepage: newest first, right after <ul class="articles">
+    # Homepage: newest first, at the top of the Writing list (not Projects)
     li = f"""        <li>
           <a href="writing/{slug}.html">
             <span class="article-title">{html.escape(title, quote=False)}</span>
@@ -439,7 +439,7 @@ def main() -> int:
           </a>
         </li>
 """
-    index, n = re.subn(r'(<ul class="articles">\n)', r"\1" + li, index, count=1)
+    index, n = re.subn(r'(<section id="writing">\s*<h2>Writing</h2>\s*<ul class="articles">\n)', lambda m: m.group(1) + li, index, count=1)
     if n:
         index_path.write_text(index)
         print("Updated index.html")

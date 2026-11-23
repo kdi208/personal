@@ -1,0 +1,5 @@
+# Repo files that should not be served on dinoilievski.com
+plan.md
+scripts/
+.github/
+README.md
